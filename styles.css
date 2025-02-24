@@ -70,17 +70,9 @@ nav {
 .respiratory { background: #45aaf2; }
 .immunity { background: #2ecc71; }
 
-footer {
-    background: #333;
-    color: white;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
 #chat-box {
     position: fixed;
-    bottom: 80px; /* Adjusted to avoid overlapping with the footer */
+    bottom: 20px; /* Ensures it's always visible */
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
@@ -89,11 +81,16 @@ footer {
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000; /* Ensures it stays above other elements */
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Chat messages area */
 #messages {
-    height: 250px; 
+    width: 100%;
+    height: 250px;
     overflow-y: auto;
     margin-bottom: 10px;
     border: 1px solid #ccc;
@@ -102,8 +99,9 @@ footer {
     border-radius: 5px;
 }
 
+/* Input box and button */
 #messageInput {
-    width: 70%;
+    width: 75%;
     padding: 10px;
     margin-right: 5px;
     border: 1px solid #ccc;
@@ -125,7 +123,18 @@ footer {
     background-color: #218838;
 }
 
-/* Ensuring the footer stays at the bottom */
+/* Media query to adjust for larger screens */
+@media (min-width: 1024px) {
+    #chat-box {
+        bottom: 50px; /* Move it up slightly on larger screens */
+    }
+
+    #messages {
+        height: 300px; /* More space for messages on bigger screens */
+    }
+}
+
+/* Ensuring the footer stays fixed */
 footer {
     position: fixed;
     bottom: 0;
