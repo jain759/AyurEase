@@ -1,11 +1,14 @@
+
+// Simulating a basic chat
+const messagesDiv = document.getElementById("messages");
+const messageInput = document.getElementById("messageInput");
+
 function sendMessage() {
-    let input = document.getElementById("chat-input");
-    let message = input.value;
-    if (message.trim() !== "") {
-        let chatBox = document.getElementById("chat-box");
-        let newMessage = document.createElement("p");
-        newMessage.textContent = message;
-        chatBox.appendChild(newMessage);
-        input.value = "";
+    const message = messageInput.value.trim();
+    if (message !== "") {
+        const messageElement = document.createElement("p");
+        messageElement.textContent = `You: ${message}`;
+        messagesDiv.appendChild(messageElement);
+        messageInput.value = "";
     }
 }
