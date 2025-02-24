@@ -79,38 +79,39 @@ footer {
     bottom: 0;
 }
 #chat-box {
-    width: 300px;
-    background: #ffffff;
-    padding: 15px;
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+    background: #f4f4f4;
     border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
 }
 
 #messages {
-    height: 150px;
+    height: 200px;
     overflow-y: auto;
-    background: #f1f1f1;
+    background: white;
     padding: 10px;
-    border-radius: 5px;
+    border: 1px solid #ddd;
     margin-bottom: 10px;
 }
 
-input {
-    width: 80%;
-    padding: 5px;
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 button {
-    padding: 5px 10px;
+    padding: 10px 15px;
+    border: none;
     background: #28a745;
     color: white;
-    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-
-    
+button:hover {
+    background: #218838;
+}
