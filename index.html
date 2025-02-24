@@ -31,6 +31,17 @@
             <a href="remedy_immunity.html" class="button immunity">Immunity Boosting Remedies</a>
         </div>
     </section>
+        <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let loggedInUser = localStorage.getItem("loggedInUser");
+        if (loggedInUser) {
+            document.getElementById("welcome-message").innerHTML = "Welcome, " + loggedInUser + "!";
+        }
+    });
+</script>
+
+<h2 id="welcome-message"></h2> <!-- This will show the username -->
+
 <!-- Chat Section -->
     <section id="chat-box">
         <h2>💬 Live Chat</h2>
