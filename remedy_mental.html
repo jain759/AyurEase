@@ -5,18 +5,162 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mental Health Remedies</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: linear-gradient(45deg, #673ab7, #512da8);
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+        h2 {
+            font-size: 2.5rem;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+        }
+        .home {
+            display: inline-block;
+            background: linear-gradient(45deg, #311b92, #673ab7);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
+        }
+        .home:hover {
+            background: linear-gradient(45deg, #673ab7, #311b92);
+            transform: scale(1.05);
+        }
+        .remedy-container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .remedy {
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            transition: 0.3s;
+            transform: scale(1);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .remedy:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+        }
+        /* Different styles for each remedy */
+        .remedy:nth-child(1) { background: #ff5722; font-family: 'Courier New', monospace; } 
+        .remedy:nth-child(2) { background: #4caf50; font-family: 'Georgia', serif; }
+        .remedy:nth-child(3) { background: #ffeb3b; color: black; font-family: 'Verdana', sans-serif; }
+        .remedy:nth-child(4) { background: #009688; font-family: 'Comic Sans MS', cursive; }
+        .remedy:nth-child(5) { background: #e91e63; font-family: 'Lucida Console', monospace; }
+        .remedy:nth-child(6) { background: #3f51b5; font-family: 'Arial Black', sans-serif; }
+        .remedy:nth-child(7) { background: #795548; font-family: 'Tahoma', sans-serif; }
+        .remedy:nth-child(8) { background: #ff1744; font-family: 'Times New Roman', serif; }
+        .remedy:nth-child(9) { background: #8bc34a; font-family: 'Impact', sans-serif; }
+        .remedy:nth-child(10) { background: #607d8b; font-family: 'Garamond', serif; }
+        .remedy:nth-child(11) { background: #9e9e9e; font-family: 'Palatino Linotype', serif; }
+        .remedy:nth-child(12) { background: #d500f9; font-family: 'Franklin Gothic Medium', sans-serif; }
+        .remedy:nth-child(13) { background: #ff6f00; font-family: 'Courier', monospace; }
+        .remedy:nth-child(14) { background: #00e676; color: black; font-family: 'Century Gothic', sans-serif; }
+        .remedy:nth-child(15) { background: #1e88e5; font-family: 'Lucida Handwriting', cursive; }
+
+        .remedy h3 {
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+        .remedy p {
+            margin: 0;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
-    <h2>Mental Health Remedies</h2>
-    <a href="index.html" class="home">&#8962; Home</a>
-    <div class="remedy">
-        <h3>Ashwagandha Tea</h3>
-        <p>Drink Ashwagandha tea to reduce stress and anxiety.</p>
-    </div>
-    <div class="remedy">
-        <h3>Meditation</h3>
-        <p>Practice 10 minutes of meditation daily for mental clarity.</p>
+    <h2>🧠 Mental Health Remedies 🧠</h2>
+    <a href="index.html" class="home">🏠 Home</a>
+
+    <div class="remedy-container">
+        <div class="remedy">
+            <h3>1. Meditation</h3>
+            <p>Practice daily meditation to reduce stress and improve focus.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>2. Deep Breathing</h3>
+            <p>Try deep breathing exercises to calm the mind.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>3. Chamomile Tea</h3>
+            <p>Drink chamomile tea to relax and ease anxiety.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>4. Daily Exercise</h3>
+            <p>Engage in physical activity to boost mood and reduce stress.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>5. Ashwagandha</h3>
+            <p>Take Ashwagandha to help manage anxiety and cortisol levels.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>6. Digital Detox</h3>
+            <p>Limit screen time to reduce stress and improve sleep.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>7. Journaling</h3>
+            <p>Write down thoughts and emotions to clear your mind.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>8. Listening to Music</h3>
+            <p>Listen to soothing music to enhance mood and relaxation.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>9. Adequate Sleep</h3>
+            <p>Ensure 7-9 hours of quality sleep for a healthy mind.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>10. Spending Time in Nature</h3>
+            <p>Take a walk in nature to refresh the mind and reduce stress.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>11. Social Connections</h3>
+            <p>Engage in meaningful conversations with loved ones.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>12. Omega-3 Fatty Acids</h3>
+            <p>Consume foods rich in omega-3s like walnuts and flaxseeds.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>13. Practicing Gratitude</h3>
+            <p>Maintain a gratitude journal for a positive mindset.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>14. Aromatherapy</h3>
+            <p>Use lavender or peppermint oil to relax the mind.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>15. Laughter Therapy</h3>
+            <p>Watch comedy shows or practice laughter yoga.</p>
+        </div>
     </div>
 </body>
 </html>
-
