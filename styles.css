@@ -75,10 +75,8 @@ nav {
     display: block !important; /* Forces visibility */
     position: fixed;
     bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 500px;
+    right: 20px; /* Moves chat box to bottom-right corner */
+    width: 300px;
     max-height: 400px; /* Prevents chat box from growing too tall */
     background: white;
     padding: 15px;
@@ -124,12 +122,12 @@ nav {
     background-color: #218838;
 }
 
-/* Media query to adjust for different screen sizes */
+/* Media query for smaller screens */
 @media (max-width: 768px) {
     #chat-box {
-        width: 80%; /* Reduce width for smaller screens */
-        left: 10%;
-        transform: none;
+        width: 90%; /* Adjust width for smaller screens */
+        right: 5%;
+        bottom: 20px;
     }
 }
 
