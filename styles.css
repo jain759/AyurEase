@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+}
+.categories {
+    margin-top: 20px;
+}
+.category-list a {
+    display: block;
+    margin: 10px;
+    text-decoration: none;
+    background: #008080;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.category-list a:hover {
+    background: #005f5f;
+}
+.home {
+    font-size: 20px;
+    text-decoration: none;
+}
+.remedy {
+    margin: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+}
+img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+}
