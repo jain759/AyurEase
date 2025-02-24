@@ -71,8 +71,9 @@ nav {
 .immunity { background: #2ecc71; }
 
 #chat-box {
+    display: block !important;  /* Forces visibility */
     position: fixed;
-    bottom: 20px; /* Ensures it's always visible */
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
@@ -82,10 +83,8 @@ nav {
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
+
 
 /* Chat messages area */
 #messages {
