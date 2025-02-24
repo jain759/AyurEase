@@ -5,17 +5,163 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hair Care Remedies</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: linear-gradient(45deg, #ff9800, #ffcc80);
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+        h2 {
+            font-size: 2.5rem;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+        }
+        .home {
+            display: inline-block;
+            background: linear-gradient(45deg, #e65100, #ff9800);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
+        }
+        .home:hover {
+            background: linear-gradient(45deg, #ff9800, #e65100);
+            transform: scale(1.05);
+        }
+        .remedy-container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .remedy {
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            transition: 0.3s;
+            transform: scale(1);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .remedy:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+        }
+        /* Different styles for each remedy */
+        .remedy:nth-child(1) { background: #ff5722; font-family: 'Courier New', monospace; } 
+        .remedy:nth-child(2) { background: #4caf50; font-family: 'Georgia', serif; }
+        .remedy:nth-child(3) { background: #ffeb3b; color: black; font-family: 'Verdana', sans-serif; }
+        .remedy:nth-child(4) { background: #673ab7; font-family: 'Trebuchet MS', sans-serif; }
+        .remedy:nth-child(5) { background: #009688; font-family: 'Comic Sans MS', cursive; }
+        .remedy:nth-child(6) { background: #e91e63; font-family: 'Lucida Console', monospace; }
+        .remedy:nth-child(7) { background: #3f51b5; font-family: 'Arial Black', sans-serif; }
+        .remedy:nth-child(8) { background: #795548; font-family: 'Tahoma', sans-serif; }
+        .remedy:nth-child(9) { background: #ff1744; font-family: 'Times New Roman', serif; }
+        .remedy:nth-child(10) { background: #8bc34a; font-family: 'Impact', sans-serif; }
+        .remedy:nth-child(11) { background: #607d8b; font-family: 'Garamond', serif; }
+        .remedy:nth-child(12) { background: #9e9e9e; font-family: 'Palatino Linotype', serif; }
+        .remedy:nth-child(13) { background: #d500f9; font-family: 'Franklin Gothic Medium', sans-serif; }
+        .remedy:nth-child(14) { background: #ff6f00; font-family: 'Courier', monospace; }
+        .remedy:nth-child(15) { background: #00e676; color: black; font-family: 'Century Gothic', sans-serif; }
+
+        .remedy h3 {
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+        .remedy p {
+            margin: 0;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
-    <h2>Hair Care Remedies</h2>
-    <a href="index.html" class="home">&#8962; Home</a>
-    <div class="remedy">
-        <h3>Coconut Oil Massage</h3>
-        <p>Massage warm coconut oil into the scalp for hair nourishment.</p>
-    </div>
-    <div class="remedy">
-        <h3>Onion Juice Treatment</h3>
-        <p>Apply onion juice to the scalp and leave for 30 minutes before washing.</p>
+    <h2>💇‍♀️ Hair Care Remedies 💇‍♂️</h2>
+    <a href="index.html" class="home">🏠 Home</a>
+
+    <div class="remedy-container">
+        <div class="remedy">
+            <h3>1. Coconut Oil Massage</h3>
+            <p>Apply warm coconut oil for deep nourishment.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>2. Onion Juice</h3>
+            <p>Use onion juice to boost hair growth naturally.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>3. Aloe Vera Gel</h3>
+            <p>Apply aloe vera for a healthy scalp and shiny hair.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>4. Fenugreek Hair Mask</h3>
+            <p>Use fenugreek paste to prevent hair fall.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>5. Castor Oil Treatment</h3>
+            <p>Massage with castor oil to strengthen hair.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>6. Yogurt and Honey Pack</h3>
+            <p>Use yogurt and honey for smooth, frizz-free hair.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>7. Green Tea Rinse</h3>
+            <p>Rinse your hair with green tea to reduce hair loss.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>8. Hibiscus Hair Pack</h3>
+            <p>Use hibiscus flowers to strengthen roots.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>9. Egg and Olive Oil Mask</h3>
+            <p>Mix egg with olive oil for deep conditioning.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>10. Curry Leaves Oil</h3>
+            <p>Boil curry leaves in coconut oil for hair regrowth.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>11. Apple Cider Vinegar Rinse</h3>
+            <p>Use ACV rinse to balance scalp pH.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>12. Bhringraj Oil</h3>
+            <p>Massage with Bhringraj oil to prevent premature greying.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>13. Argan Oil Serum</h3>
+            <p>Apply argan oil for silky and hydrated hair.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>14. Banana Hair Mask</h3>
+            <p>Use banana for soft and manageable hair.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>15. Neem Rinse</h3>
+            <p>Rinse hair with neem water to fight dandruff.</p>
+        </div>
     </div>
 </body>
 </html>
+
