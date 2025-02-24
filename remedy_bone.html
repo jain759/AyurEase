@@ -5,70 +5,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bone Health Remedies</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-top: 20px;
+        }
+        .home {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .home:hover {
+            background-color: #2980b9;
+        }
+        .remedy-container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .remedy {
+            background: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #27ae60;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .remedy h3 {
+            color: #27ae60;
+            margin-bottom: 5px;
+        }
+        .remedy p {
+            color: #555;
+        }
+    </style>
 </head>
 <body>
-    <h2>Bone Health Remedies</h2>
-    <a href="index.html" class="home">&#8962; Home</a>
+    <h2>🦴 Bone Health Remedies 🦴</h2>
+    <a href="index.html" class="home">🏠 Home</a>
 
-    <div class="remedy">
-        <img src="data:image/jpeg;base64,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" alt="Sesame Seeds">
-        <h3>Sesame Seeds</h3>
-        <p>Eat sesame seeds daily for stronger bones.</p>
+    <div class="remedy-container">
+        <div class="remedy">
+            <h3>1. Sesame Seeds</h3>
+            <p>Rich in calcium, these seeds help strengthen bones naturally.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>2. Turmeric Milk</h3>
+            <p>Drinking warm turmeric milk reduces joint pain and improves bone health.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>3. Almonds</h3>
+            <p>Almonds contain magnesium and calcium, essential for strong bones.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>4. Ashwagandha</h3>
+            <p>This ancient herb supports bone density and reduces the risk of osteoporosis.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>5. Drumstick Leaves</h3>
+            <p>Drumstick leaves (Moringa) are high in calcium and iron, boosting bone health.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>6. Figs</h3>
+            <p>A great source of calcium, figs help in strengthening bones.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>7. Sunlight Exposure</h3>
+            <p>Vitamin D from sunlight helps calcium absorption, making bones stronger.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>8. Dairy Products</h3>
+            <p>Milk, cheese, and yogurt are rich in calcium, supporting bone density.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>9. Ragi (Finger Millet)</h3>
+            <p>A plant-based calcium powerhouse that prevents bone loss.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>10. Prunes</h3>
+            <p>Consuming prunes daily can prevent osteoporosis and bone loss.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>11. Green Leafy Vegetables</h3>
+            <p>Spinach, kale, and fenugreek leaves are excellent sources of calcium.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>12. Flaxseeds</h3>
+            <p>Flaxseeds contain omega-3 fatty acids that promote bone strength.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>13. Soy Products</h3>
+            <p>Tofu, soy milk, and soybeans contain isoflavones that help maintain bone density.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>14. Eggs</h3>
+            <p>Eggs are a great source of Vitamin D, crucial for calcium absorption.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>15. Walnuts</h3>
+            <p>Walnuts contain omega-3 fatty acids, which are beneficial for bone health.</p>
+        </div>
     </div>
-
-    <div class="remedy">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Turmeric_Milk.jpg" alt="Turmeric Milk">
-        <h3>Turmeric Milk</h3>
-        <p>Drink turmeric milk for joint pain relief.</p>
-    </div>
-
-    <div class="remedy">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Almonds.jpg" alt="Almonds">
-        <h3>Almonds</h3>
-        <p>Almonds are rich in calcium and help maintain bone density.</p>
-    </div>
-
-    <div class="remedy">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Ashwagandha.jpg" alt="Ashwagandha">
-        <h3>Ashwagandha</h3>
-        <p>Boosts bone strength and helps in osteoporosis prevention.</p>
-    </div>
-
-    <div class="remedy">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Drumstick_Leaves.jpg" alt="Drumstick Leaves">
-        <h3>Drumstick Leaves</h3>
-        <p>Rich in calcium, they help strengthen bones naturally.</p>
-    </div>
-
-    <div class="remedy">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Figs.jpg" alt="Figs">
-        <h3>Figs</h3>
-        <p>High in calcium and phosphorus, figs promote bone health.</p>
-    </div>
-
-    <div class="remedy">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Sunlight.jpg" alt="Sunlight">
-        <h3>Sunlight Exposure</h3>
-        <p>Daily sunlight exposure helps in Vitamin D synthesis for strong bones.</p>
-    </div>
-
-    <div class="remedy">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Milk_and_Dairy.jpg" alt="Milk and Dairy Products">
-        <h3>Milk and Dairy Products</h3>
-        <p>Consume dairy products like milk, cheese, and yogurt for bone strength.</p>
-    </div>
-
-    <div class="remedy">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Ragi.jpg" alt="Ragi">
-        <h3>Ragi (Finger Millet)</h3>
-        <p>Ragi is an excellent plant-based calcium source for bone health.</p>
-    </div>
-
-    <div class="remedy">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Prunes.jpg" alt="Prunes">
-        <h3>Prunes</h3>
-        <p>Eating prunes helps in preventing bone loss and improves density.</p>
-    </div>
-
 </body>
 </html>
