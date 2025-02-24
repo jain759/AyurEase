@@ -16,12 +16,26 @@ header {
     font-weight: bold;
 }
 
-nav a {
-    margin: 0 15px;
+nav {
+    margin: 20px 0;
+}
+
+.button {
+    display: inline-block;
     text-decoration: none;
     color: white;
+    background: #333;
+    padding: 15px 25px;
+    border-radius: 25px;
     font-size: 1.2em;
     font-weight: bold;
+    transition: 0.3s;
+    margin: 10px;
+}
+
+.button:hover {
+    background: #555;
+    transform: scale(1.1);
 }
 
 .categories {
@@ -37,17 +51,6 @@ nav a {
     padding: 10px;
 }
 
-.category {
-    display: block;
-    text-decoration: none;
-    color: white;
-    padding: 15px;
-    border-radius: 10px;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-align: center;
-}
-
 .digestion { background: #ff6f61; }
 .skin { background: #ffcc5c; }
 .hair { background: #88d8b0; }
@@ -56,12 +59,6 @@ nav a {
 .bone { background: #e17055; }
 .respiratory { background: #45aaf2; }
 .immunity { background: #2ecc71; }
-
-.category:hover {
-    transform: scale(1.1);
-    transition: 0.3s ease-in-out;
-    opacity: 0.9;
-}
 
 footer {
     background: #333;
