@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
-            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(45deg, #ff9800, #ffcc80);
+            font-family: 'Arial', sans-serif;
             text-align: center;
             padding: 20px;
             color: white;
@@ -19,7 +19,7 @@
         }
         .home {
             display: inline-block;
-            background: linear-gradient(45deg, #ff4b1f, #ff9068);
+            background: linear-gradient(45deg, #8e44ad, #3498db);
             color: white;
             padding: 12px 25px;
             text-decoration: none;
@@ -30,7 +30,7 @@
             transition: 0.3s;
         }
         .home:hover {
-            background: linear-gradient(45deg, #ff9068, #ff4b1f);
+            background: linear-gradient(45deg, #3498db, #8e44ad);
             transform: scale(1.05);
         }
         .remedy-container {
@@ -55,22 +55,23 @@
             transform: scale(1.05);
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
         }
-        .remedy:nth-child(1) { background: #ff5733; } /* Red-Orange */
-        .remedy:nth-child(2) { background: #33b5e5; } /* Blue */
-        .remedy:nth-child(3) { background: #9c27b0; } /* Purple */
-        .remedy:nth-child(4) { background: #ff9800; } /* Orange */
-        .remedy:nth-child(5) { background: #8bc34a; } /* Green */
-        .remedy:nth-child(6) { background: #e91e63; } /* Pink */
-        .remedy:nth-child(7) { background: #673ab7; } /* Dark Purple */
-        .remedy:nth-child(8) { background: #4caf50; } /* Bright Green */
-        .remedy:nth-child(9) { background: #ffeb3b; color: black; } /* Yellow */
-        .remedy:nth-child(10) { background: #795548; } /* Brown */
-        .remedy:nth-child(11) { background: #3f51b5; } /* Indigo */
-        .remedy:nth-child(12) { background: #607d8b; } /* Grey-Blue */
-        .remedy:nth-child(13) { background: #f44336; } /* Red */
-        .remedy:nth-child(14) { background: #00bcd4; } /* Cyan */
-        .remedy:nth-child(15) { background: #ffc107; color: black; } /* Amber */
-        
+        /* Different styles for each remedy */
+        .remedy:nth-child(1) { background: #e74c3c; font-family: 'Courier New', monospace; } 
+        .remedy:nth-child(2) { background: #2ecc71; font-family: 'Georgia', serif; }
+        .remedy:nth-child(3) { background: #3498db; font-family: 'Verdana', sans-serif; }
+        .remedy:nth-child(4) { background: #f1c40f; color: black; font-family: 'Trebuchet MS', sans-serif; }
+        .remedy:nth-child(5) { background: #9b59b6; font-family: 'Comic Sans MS', cursive; }
+        .remedy:nth-child(6) { background: #1abc9c; font-family: 'Lucida Console', monospace; }
+        .remedy:nth-child(7) { background: #e67e22; font-family: 'Arial Black', sans-serif; }
+        .remedy:nth-child(8) { background: #34495e; font-family: 'Tahoma', sans-serif; }
+        .remedy:nth-child(9) { background: #d35400; font-family: 'Times New Roman', serif; }
+        .remedy:nth-child(10) { background: #16a085; font-family: 'Impact', sans-serif; }
+        .remedy:nth-child(11) { background: #c0392b; font-family: 'Garamond', serif; }
+        .remedy:nth-child(12) { background: #7f8c8d; font-family: 'Palatino Linotype', serif; }
+        .remedy:nth-child(13) { background: #2980b9; font-family: 'Franklin Gothic Medium', sans-serif; }
+        .remedy:nth-child(14) { background: #27ae60; font-family: 'Courier', monospace; }
+        .remedy:nth-child(15) { background: #f39c12; color: black; font-family: 'Century Gothic', sans-serif; }
+
         .remedy h3 {
             margin-bottom: 10px;
             font-size: 22px;
@@ -88,77 +89,77 @@
     <div class="remedy-container">
         <div class="remedy">
             <h3>1. Sesame Seeds</h3>
-            <p>Rich in calcium, these seeds help strengthen bones naturally.</p>
+            <p>Eat sesame seeds daily for stronger bones.</p>
         </div>
 
         <div class="remedy">
             <h3>2. Turmeric Milk</h3>
-            <p>Drinking warm turmeric milk reduces joint pain and improves bone health.</p>
+            <p>Drink turmeric milk for joint pain relief.</p>
         </div>
 
         <div class="remedy">
             <h3>3. Almonds</h3>
-            <p>Almonds contain magnesium and calcium, essential for strong bones.</p>
+            <p>Rich in calcium and magnesium, essential for bones.</p>
         </div>
 
         <div class="remedy">
-            <h3>4. Ashwagandha</h3>
-            <p>This ancient herb supports bone density and reduces the risk of osteoporosis.</p>
+            <h3>4. Leafy Greens</h3>
+            <p>Spinach and kale provide essential bone nutrients.</p>
         </div>
 
         <div class="remedy">
-            <h3>5. Drumstick Leaves</h3>
-            <p>Drumstick leaves (Moringa) are high in calcium and iron, boosting bone health.</p>
+            <h3>5. Figs</h3>
+            <p>Contain calcium and phosphorus for bone strength.</p>
         </div>
 
         <div class="remedy">
-            <h3>6. Figs</h3>
-            <p>A great source of calcium, figs help in strengthening bones.</p>
+            <h3>6. Ragi (Finger Millet)</h3>
+            <p>A great plant-based calcium source.</p>
         </div>
 
         <div class="remedy">
-            <h3>7. Sunlight Exposure</h3>
-            <p>Vitamin D from sunlight helps calcium absorption, making bones stronger.</p>
+            <h3>7. Prunes</h3>
+            <p>Help maintain bone density and prevent osteoporosis.</p>
         </div>
 
         <div class="remedy">
-            <h3>8. Dairy Products</h3>
-            <p>Milk, cheese, and yogurt are rich in calcium, supporting bone density.</p>
+            <h3>8. Basil Seeds</h3>
+            <p>Support bone health and strengthen joints.</p>
         </div>
 
         <div class="remedy">
-            <h3>9. Ragi (Finger Millet)</h3>
-            <p>A plant-based calcium powerhouse that prevents bone loss.</p>
+            <h3>9. Yogurt</h3>
+            <p>High in probiotics and calcium for stronger bones.</p>
         </div>
 
         <div class="remedy">
-            <h3>10. Prunes</h3>
-            <p>Consuming prunes daily can prevent osteoporosis and bone loss.</p>
+            <h3>10. Cloves</h3>
+            <p>Reduce joint pain and inflammation.</p>
         </div>
 
         <div class="remedy">
-            <h3>11. Green Leafy Vegetables</h3>
-            <p>Spinach, kale, and fenugreek leaves are excellent sources of calcium.</p>
+            <h3>11. Soy Milk</h3>
+            <p>Plant-based alternative rich in calcium.</p>
         </div>
 
         <div class="remedy">
-            <h3>12. Flaxseeds</h3>
-            <p>Flaxseeds contain omega-3 fatty acids that promote bone strength.</p>
+            <h3>12. Sunflower Seeds</h3>
+            <p>Boost vitamin D and magnesium for bones.</p>
         </div>
 
         <div class="remedy">
-            <h3>13. Soy Products</h3>
-            <p>Tofu, soy milk, and soybeans contain isoflavones that help maintain bone density.</p>
+            <h3>13. Ginger</h3>
+            <p>Reduces inflammation and strengthens joints.</p>
         </div>
 
         <div class="remedy">
             <h3>14. Eggs</h3>
-            <p>Eggs are a great source of Vitamin D, crucial for calcium absorption.</p>
+            <p>Rich in vitamin D and protein for bone health.</p>
         </div>
 
         <div class="remedy">
             <h3>15. Walnuts</h3>
-            <p>Walnuts contain omega-3 fatty acids, which are beneficial for bone health.</p>
+            <p>Contain omega-3 fatty acids to support bones.</p>
         </div>
     </div>
 </body>
