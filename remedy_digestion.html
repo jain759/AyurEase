@@ -5,17 +5,162 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digestion Remedies</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: linear-gradient(45deg, #ffcc00, #ff6600);
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+        h2 {
+            font-size: 2.5rem;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+        }
+        .home {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff4b1f, #ff9068);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
+        }
+        .home:hover {
+            background: linear-gradient(45deg, #ff9068, #ff4b1f);
+            transform: scale(1.05);
+        }
+        .remedy-container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .remedy {
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            transition: 0.3s;
+            transform: scale(1);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .remedy:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+        }
+        /* Different styles for each remedy */
+        .remedy:nth-child(1) { background: #ff5733; font-family: 'Courier New', monospace; } 
+        .remedy:nth-child(2) { background: #33b5e5; font-family: 'Georgia', serif; }
+        .remedy:nth-child(3) { background: #9c27b0; font-family: 'Verdana', sans-serif; }
+        .remedy:nth-child(4) { background: #ff9800; font-family: 'Trebuchet MS', sans-serif; }
+        .remedy:nth-child(5) { background: #8bc34a; font-family: 'Comic Sans MS', cursive; }
+        .remedy:nth-child(6) { background: #e91e63; font-family: 'Lucida Console', monospace; }
+        .remedy:nth-child(7) { background: #673ab7; font-family: 'Arial Black', sans-serif; }
+        .remedy:nth-child(8) { background: #4caf50; font-family: 'Tahoma', sans-serif; }
+        .remedy:nth-child(9) { background: #ffeb3b; color: black; font-family: 'Times New Roman', serif; }
+        .remedy:nth-child(10) { background: #795548; font-family: 'Impact', sans-serif; }
+        .remedy:nth-child(11) { background: #3f51b5; font-family: 'Garamond', serif; }
+        .remedy:nth-child(12) { background: #607d8b; font-family: 'Palatino Linotype', serif; }
+        .remedy:nth-child(13) { background: #f44336; font-family: 'Franklin Gothic Medium', sans-serif; }
+        .remedy:nth-child(14) { background: #00bcd4; font-family: 'Courier', monospace; }
+        .remedy:nth-child(15) { background: #ffc107; color: black; font-family: 'Century Gothic', sans-serif; }
+
+        .remedy h3 {
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+        .remedy p {
+            margin: 0;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
-    <h2>Digestion Remedies</h2>
-    <a href="index.html" class="home">&#8962; Home</a>
-    <div class="remedy">
-        <h3>Ginger Tea</h3>
-        <p>Boil ginger in water and drink to improve digestion.</p>
-    </div>
-    <div class="remedy">
-        <h3>Fennel Seeds</h3>
-        <p>Chew fennel seeds after meals to reduce bloating.</p>
+    <h2>🍵 Digestion Remedies 🍵</h2>
+    <a href="index.html" class="home">🏠 Home</a>
+
+    <div class="remedy-container">
+        <div class="remedy">
+            <h3>1. Ginger Tea</h3>
+            <p>Boosts digestion and relieves bloating.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>2. Fennel Seeds</h3>
+            <p>Chewing fennel seeds after meals prevents gas and bloating.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>3. Triphala Powder</h3>
+            <p>A mix of three fruits that cleanses the digestive system.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>4. Lemon & Honey Water</h3>
+            <p>Drinking warm lemon and honey water in the morning detoxifies the gut.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>5. Yogurt</h3>
+            <p>Contains probiotics that enhance digestion.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>6. Cumin Water</h3>
+            <p>Drinking cumin-infused water improves gut health.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>7. Mint Leaves</h3>
+            <p>Soothes stomach discomfort and promotes digestion.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>8. Buttermilk</h3>
+            <p>Helps balance gut bacteria and aids digestion.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>9. Aloe Vera Juice</h3>
+            <p>Improves bowel movements and prevents acidity.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>10. Papaya</h3>
+            <p>Contains papain, an enzyme that improves digestion.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>11. Carom Seeds (Ajwain)</h3>
+            <p>Chewing ajwain helps relieve indigestion and gas.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>12. Black Salt</h3>
+            <p>Regulates digestive juices and improves metabolism.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>13. Warm Water</h3>
+            <p>Drinking warm water before meals aids digestion.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>14. Clove</h3>
+            <p>Chewing cloves helps relieve acidity and bloating.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>15. Apple Cider Vinegar</h3>
+            <p>Improves stomach acidity and helps break down food.</p>
+        </div>
     </div>
 </body>
 </html>
