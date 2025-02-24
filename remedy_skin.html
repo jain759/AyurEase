@@ -5,17 +5,162 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skin Care Remedies</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: linear-gradient(45deg, #ff66b2, #ffccff);
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+        h2 {
+            font-size: 2.5rem;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+        }
+        .home {
+            display: inline-block;
+            background: linear-gradient(45deg, #e91e63, #ff4081);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
+        }
+        .home:hover {
+            background: linear-gradient(45deg, #ff4081, #e91e63);
+            transform: scale(1.05);
+        }
+        .remedy-container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .remedy {
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            transition: 0.3s;
+            transform: scale(1);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .remedy:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+        }
+        /* Different styles for each remedy */
+        .remedy:nth-child(1) { background: #ff4081; font-family: 'Courier New', monospace; } 
+        .remedy:nth-child(2) { background: #ff9800; font-family: 'Georgia', serif; }
+        .remedy:nth-child(3) { background: #4caf50; font-family: 'Verdana', sans-serif; }
+        .remedy:nth-child(4) { background: #f1c40f; color: black; font-family: 'Trebuchet MS', sans-serif; }
+        .remedy:nth-child(5) { background: #9c27b0; font-family: 'Comic Sans MS', cursive; }
+        .remedy:nth-child(6) { background: #1abc9c; font-family: 'Lucida Console', monospace; }
+        .remedy:nth-child(7) { background: #e67e22; font-family: 'Arial Black', sans-serif; }
+        .remedy:nth-child(8) { background: #34495e; font-family: 'Tahoma', sans-serif; }
+        .remedy:nth-child(9) { background: #d35400; font-family: 'Times New Roman', serif; }
+        .remedy:nth-child(10) { background: #16a085; font-family: 'Impact', sans-serif; }
+        .remedy:nth-child(11) { background: #c0392b; font-family: 'Garamond', serif; }
+        .remedy:nth-child(12) { background: #7f8c8d; font-family: 'Palatino Linotype', serif; }
+        .remedy:nth-child(13) { background: #2980b9; font-family: 'Franklin Gothic Medium', sans-serif; }
+        .remedy:nth-child(14) { background: #27ae60; font-family: 'Courier', monospace; }
+        .remedy:nth-child(15) { background: #f39c12; color: black; font-family: 'Century Gothic', sans-serif; }
+
+        .remedy h3 {
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+        .remedy p {
+            margin: 0;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
-    <h2>Skin Care Remedies</h2>
-    <a href="index.html" class="home">&#8962; Home</a>
-    <div class="remedy">
-        <h3>Turmeric & Honey Face Mask</h3>
-        <p>Mix 1 tsp turmeric with 1 tbsp honey. Apply for 15 mins and wash.</p>
-    </div>
-    <div class="remedy">
-        <h3>Aloe Vera Gel</h3>
-        <p>Apply fresh aloe vera gel to soothe skin.</p>
+    <h2>💆‍♀️ Skin Care Remedies 💆‍♂️</h2>
+    <a href="index.html" class="home">🏠 Home</a>
+
+    <div class="remedy-container">
+        <div class="remedy">
+            <h3>1. Aloe Vera Gel</h3>
+            <p>Apply aloe vera to soothe and hydrate your skin.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>2. Turmeric Face Mask</h3>
+            <p>Mix turmeric with yogurt and honey for glowing skin.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>3. Rose Water</h3>
+            <p>Use rose water as a natural toner to refresh your skin.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>4. Honey and Lemon</h3>
+            <p>Apply honey and lemon for a natural skin brightener.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>5. Coconut Oil</h3>
+            <p>Moisturize your skin with pure coconut oil.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>6. Cucumber Mask</h3>
+            <p>Apply cucumber slices to reduce puffiness and hydrate.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>7. Gram Flour Scrub</h3>
+            <p>Use gram flour with milk for gentle exfoliation.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>8. Yogurt Face Pack</h3>
+            <p>Apply plain yogurt to nourish and smooth your skin.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>9. Almond Oil</h3>
+            <p>Massage with almond oil for a natural glow.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>10. Tomato Pulp</h3>
+            <p>Apply tomato pulp to reduce blemishes.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>11. Green Tea Ice Cubes</h3>
+            <p>Rub green tea ice cubes for fresh and rejuvenated skin.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>12. Sandalwood Paste</h3>
+            <p>Apply sandalwood paste for clear, radiant skin.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>13. Banana Face Mask</h3>
+            <p>Mash a banana for an instant hydrating face mask.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>14. Neem Paste</h3>
+            <p>Apply neem paste to fight acne and purify skin.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>15. Papaya Scrub</h3>
+            <p>Use papaya for natural exfoliation and skin brightening.</p>
+        </div>
     </div>
 </body>
 </html>
