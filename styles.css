@@ -5,6 +5,7 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    padding-bottom: 120px; /* Prevent overlap with chat box */
 }
 
 header {
@@ -71,20 +72,21 @@ nav {
 .immunity { background: #2ecc71; }
 
 #chat-box {
-    display: block !important;  /* Forces visibility */
+    display: block !important; /* Forces visibility */
     position: fixed;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
     max-width: 500px;
+    max-height: 400px; /* Prevents chat box from growing too tall */
     background: white;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+    z-index: 9999; /* Keeps it above other elements */
+    overflow-y: auto; /* Allows scrolling if needed */
 }
-
 
 /* Chat messages area */
 #messages {
@@ -122,10 +124,18 @@ nav {
     background-color: #218838;
 }
 
-/* Media query to adjust for larger screens */
+/* Media query to adjust for different screen sizes */
+@media (max-width: 768px) {
+    #chat-box {
+        width: 80%; /* Reduce width for smaller screens */
+        left: 10%;
+        transform: none;
+    }
+}
+
 @media (min-width: 1024px) {
     #chat-box {
-        bottom: 50px; /* Move it up slightly on larger screens */
+        bottom: 50px; /* Moves chat box up slightly on larger screens */
     }
 
     #messages {
