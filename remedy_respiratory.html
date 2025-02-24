@@ -2,20 +2,165 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport\" content="width=device-width, initial-scale=1.0">
-    <title>Respiratory Remedies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respiratory Health Remedies</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+        h2 {
+            font-size: 2.5rem;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+        }
+        .home {
+            display: inline-block;
+            background: linear-gradient(45deg, #1565c0, #1e88e5);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
+        }
+        .home:hover {
+            background: linear-gradient(45deg, #1e88e5, #1565c0);
+            transform: scale(1.05);
+        }
+        .remedy-container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .remedy {
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            transition: 0.3s;
+            transform: scale(1);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .remedy:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+        }
+        /* Unique styles for each remedy */
+        .remedy:nth-child(1) { background: #ff7043; font-family: 'Courier New', monospace; } 
+        .remedy:nth-child(2) { background: #4caf50; font-family: 'Georgia', serif; }
+        .remedy:nth-child(3) { background: #ffeb3b; color: black; font-family: 'Verdana', sans-serif; }
+        .remedy:nth-child(4) { background: #009688; font-family: 'Comic Sans MS', cursive; }
+        .remedy:nth-child(5) { background: #e91e63; font-family: 'Lucida Console', monospace; }
+        .remedy:nth-child(6) { background: #3f51b5; font-family: 'Arial Black', sans-serif; }
+        .remedy:nth-child(7) { background: #795548; font-family: 'Tahoma', sans-serif; }
+        .remedy:nth-child(8) { background: #ff1744; font-family: 'Times New Roman', serif; }
+        .remedy:nth-child(9) { background: #8bc34a; font-family: 'Impact', sans-serif; }
+        .remedy:nth-child(10) { background: #607d8b; font-family: 'Garamond', serif; }
+        .remedy:nth-child(11) { background: #9e9e9e; font-family: 'Palatino Linotype', serif; }
+        .remedy:nth-child(12) { background: #d500f9; font-family: 'Franklin Gothic Medium', sans-serif; }
+        .remedy:nth-child(13) { background: #ff6f00; font-family: 'Courier', monospace; }
+        .remedy:nth-child(14) { background: #00e676; color: black; font-family: 'Century Gothic', sans-serif; }
+        .remedy:nth-child(15) { background: #1e88e5; font-family: 'Lucida Handwriting', cursive; }
+
+        .remedy h3 {
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+        .remedy p {
+            margin: 0;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
-    <h2>Respiratory Remedies</h2>
-    <a href="index.html" class="home">&#8962; Home</a>
-    <div class="remedy">
-        <h3>Steam Inhalation</h3>
-        <p>Inhale steam with eucalyptus oil to relieve congestion.</p>
-    </div>
-    <div class="remedy">
-        <h3>Honey & Ginger Tea</h3>
-        <p>Drink honey and ginger tea for cough relief.</p>
+    <h2>🌬️ Respiratory Health Remedies 🌬️</h2>
+    <a href="index.html" class="home">🏠 Home</a>
+
+    <div class="remedy-container">
+        <div class="remedy">
+            <h3>1. Steam Inhalation</h3>
+            <p>Inhale steam with eucalyptus oil to clear nasal congestion.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>2. Tulsi (Holy Basil) Tea</h3>
+            <p>Drink tulsi tea daily to boost lung health.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>3. Ginger and Honey</h3>
+            <p>Consume ginger juice with honey to soothe the throat.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>4. Warm Water Gargle</h3>
+            <p>Gargle with warm salt water to reduce throat irritation.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>5. Black Pepper and Turmeric</h3>
+            <p>Add black pepper and turmeric to warm milk for better breathing.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>6. Deep Breathing Exercises</h3>
+            <p>Practice pranayama daily for strong lungs.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>7. Clove and Honey</h3>
+            <p>Chew cloves with honey to relieve cough and congestion.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>8. Mulethi (Licorice) Tea</h3>
+            <p>Drink mulethi tea to ease breathing difficulties.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>9. Turmeric Inhalation</h3>
+            <p>Burn turmeric roots and inhale the smoke for clearer airways.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>10. Essential Oils</h3>
+            <p>Use peppermint and lavender oils to open airways.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>11. Warm Turmeric Water</h3>
+            <p>Drink warm turmeric water in the morning for respiratory health.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>12. Fennel Tea</h3>
+            <p>Drink fennel tea to reduce mucus buildup.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>13. Carom Seeds Steam</h3>
+            <p>Boil carom seeds and inhale the steam for instant relief.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>14. Hydration</h3>
+            <p>Drink plenty of fluids to keep lungs clear.</p>
+        </div>
+
+        <div class="remedy">
+            <h3>15. Avoid Pollutants</h3>
+            <p>Wear a mask in high-pollution areas to protect your lungs.</p>
+        </div>
     </div>
 </body>
 </html>
