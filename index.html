@@ -11,48 +11,64 @@
         <h1>AyurEase - Ayurvedic Remedies</h1>
         <nav>
             <a href="index.html" class="button home">&#8962; Home</a>
-            <a href="login.html" class="button">Login</a>
-            <a href="signup.html" class="button">Sign Up</a>
+            <a href="login.html" class="button" id="login-link">Login</a>
+            <a href="signup.html" class="button" id="signup-link">Sign Up</a>
         </nav>
     </header>
 
     <section class="main-content">
+        <h2 id="welcome-message"></h2> <!-- Displays username if logged in -->
 
-    <section class="categories">
-        <h2>Categories</h2>
-        <div class="category-list">
-            <a href="remedy_digestion.html" class="button digestion">Digestion Remedies</a>
-            <a href="remedy_skin.html" class="button skin">Skin Care Remedies</a>
-            <a href="remedy_hair.html" class="button hair">Hair Care Remedies</a>
-            <a href="remedy_mental.html" class="button mental">Mental Health Remedies</a>
-            <a href="remedy_sleep.html" class="button sleep">Sleep Remedies</a>
-            <a href="remedy_bone.html" class="button bone">Bone Health Remedies</a>
-            <a href="remedy_respiratory.html" class="button respiratory">Respiratory Remedies</a>
-            <a href="remedy_immunity.html" class="button immunity">Immunity Boosting Remedies</a>
-        </div>
+        <section class="categories">
+            <h2>Categories</h2>
+            <div class="category-list">
+                <a href="remedy_digestion.html" class="button digestion">Digestion Remedies</a>
+                <a href="remedy_skin.html" class="button skin">Skin Care Remedies</a>
+                <a href="remedy_hair.html" class="button hair">Hair Care Remedies</a>
+                <a href="remedy_mental.html" class="button mental">Mental Health Remedies</a>
+                <a href="remedy_sleep.html" class="button sleep">Sleep Remedies</a>
+                <a href="remedy_bone.html" class="button bone">Bone Health Remedies</a>
+                <a href="remedy_respiratory.html" class="button respiratory">Respiratory Remedies</a>
+                <a href="remedy_immunity.html" class="button immunity">Immunity Boosting Remedies</a>
+            </div>
+        </section>
+
+        <!-- Chat Section -->
+        <section id="chat-box">
+            <h2>💬 Live Chat</h2>
+            <div id="messages"></div>
+            <input type="text" id="messageInput" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </section>
     </section>
-        <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        let loggedInUser = localStorage.getItem("loggedInUser");
-        if (loggedInUser) {
-            document.getElementById("welcome-message").innerHTML = "Welcome, " + loggedInUser + "!";
-        }
-    });
-</script>
 
-<h2 id="welcome-message"></h2> <!-- This will show the username -->
-
-<!-- Chat Section -->
-    <section id="chat-box">
-        <h2>💬 Live Chat</h2>
-        <div id="messages"></div>
-        <input type="text" id="messageInput" placeholder="Type a message...">
-        <button onclick="sendMessage()">Send</button>
-    </section>
-    <script src="script.js"></script>
-    
     <footer>
         <p>&copy; 2025 AyurEase | Your Path to Natural Healing</p>
     </footer>
+
+    <script>
+        // Display logged-in user name
+        document.addEventListener("DOMContentLoaded", function () {
+            let loggedInUser = localStorage.getItem("loggedInUser");
+            if (loggedInUser) {
+                document.getElementById("welcome-message").innerHTML = "Welcome, " + loggedInUser + "!";
+                document.getElementById("login-link").style.display = "none";
+                document.getElementById("signup-link").style.display = "none";
+            }
+        });
+
+        // Chat functionality
+        function sendMessage() {
+            let input = document.getElementById("messageInput");
+            let message = input.value.trim();
+            if (message !== "") {
+                let messageContainer = document.createElement("p");
+                messageContainer.textContent = message;
+                document.getElementById("messages").appendChild(messageContainer);
+                input.value = "";
+            }
+        }
+    </script>
+
 </body>
 </html>
