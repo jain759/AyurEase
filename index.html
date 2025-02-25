@@ -21,7 +21,8 @@
 
         <section class="categories">
             <h2>Categories</h2>
-            <div class="category-list">
+            <button id="toggle-layout" class="button layout-toggle">🔄 Change Layout</button>
+            <div class="category-list grid-view" id="category-container">
                 <a href="remedy_digestion.html" class="button digestion">Digestion Remedies</a>
                 <a href="remedy_skin.html" class="button skin">Skin Care Remedies</a>
                 <a href="remedy_hair.html" class="button hair">Hair Care Remedies</a>
@@ -57,6 +58,12 @@
             }
         });
 
+        // Toggle Layout
+        document.getElementById("toggle-layout").addEventListener("click", function () {
+            let categoryContainer = document.getElementById("category-container");
+            categoryContainer.classList.toggle("list-view");
+        });
+
         // Chat functionality
         function sendMessage() {
             let input = document.getElementById("messageInput");
@@ -69,6 +76,5 @@
             }
         }
     </script>
-
 </body>
 </html>
