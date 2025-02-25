@@ -18,7 +18,7 @@
     </header>
 
     <section class="main-content">
-        <h2 id="welcome-message"></h2> <!-- Displays username if logged in -->
+        <h2 id="welcome-message"></h2>
 
         <section class="categories">
             <h2>Categories</h2>
@@ -33,14 +33,18 @@
                 <a href="remedy_immunity.html" class="button immunity">Immunity Boosting Remedies</a>
             </div>
         </section>
+    </section>
 
-        <!-- Chat Section -->
-        <section id="chat-box">
-            <h2>💬 Live Chat</h2>
-            <div id="messages"></div>
-            <input type="text" id="messageInput" placeholder="Type a message...">
-            <button onclick="sendMessage()">Send</button>
-        </section>
+    <!-- Chat Button -->
+    <button id="open-chat" class="chat-button">💬 Live Chat</button>
+
+    <!-- Chat Section (Initially Hidden) -->
+    <section id="chat-box">
+        <h2>💬 Live Chat</h2>
+        <div id="messages"></div>
+        <input type="text" id="messageInput" placeholder="Type a message...">
+        <button onclick="sendMessage()">Send</button>
+        <button id="close-chat">Back</button>
     </section>
 
     <footer>
@@ -54,33 +58,59 @@
             let loginLink = document.getElementById("login-link");
             let signupLink = document.getElementById("signup-link");
             let logoutLink = document.getElementById("logout-link");
+            let chatBox = document.getElementById("chat-box");
+            let openChatButton = document.getElementById("open-chat");
+            let closeChatButton = document.getElementById("close-chat");
 
-            if (loggedInUser) {
+            if (loggedInUser && loggedInUser !== "null") {
                 welcomeMessage.innerHTML = "Welcome, " + loggedInUser + "!";
                 loginLink.style.display = "none";
                 signupLink.style.display = "none";
                 logoutLink.style.display = "inline-block";
             }
 
-            // Logout functionality
             logoutLink.addEventListener("click", function () {
-                localStorage.removeItem("loggedInUser"); // Clear user data
-                window.location.href = "index.html"; // Redirect to home page
+                localStorage.removeItem("loggedInUser");
+                window.location.href = "index.html";
+            });
+
+            function loadMessages() {
+                let messagesContainer = document.getElementById("messages");
+                messagesContainer.innerHTML = "";
+                let messages = JSON.parse(localStorage.getItem("chatMessages")) || [];
+                messages.forEach(msg => {
+                    let messageContainer = document.createElement("p");
+                    messageContainer.textContent = msg;
+                    messagesContainer.appendChild(messageContainer);
+                });
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }
+
+            function sendMessage() {
+                let input = document.getElementById("messageInput");
+                let message = input.value.trim();
+                if (message !== "") {
+                    let messages = JSON.parse(localStorage.getItem("chatMessages")) || [];
+                    messages.push(message);
+                    localStorage.setItem("chatMessages", JSON.stringify(messages));
+                    input.value = "";
+                    loadMessages();
+                }
+            }
+
+            window.sendMessage = sendMessage;
+            loadMessages();
+
+            openChatButton.addEventListener("click", function () {
+                chatBox.style.display = "block";
+                openChatButton.style.display = "none";
+            });
+
+            closeChatButton.addEventListener("click", function () {
+                chatBox.style.display = "none";
+                openChatButton.style.display = "block";
             });
         });
-
-        // Chat functionality
-        function sendMessage() {
-            let input = document.getElementById("messageInput");
-            let message = input.value.trim();
-            if (message !== "") {
-                let messageContainer = document.createElement("p");
-                messageContainer.textContent = message;
-                document.getElementById("messages").appendChild(messageContainer);
-                input.value = "";
-            }
-        }
     </script>
-
 </body>
 </html>
