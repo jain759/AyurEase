@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AyurEase - Live Chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="button home">&#8962; Home</a>
+        </nav>
+    </header>
+
+    <section id="chat-box">
+        <h2>💬 Live Chat</h2>
+        <div id="messages"></div>
+        <input type="text" id="messageInput" placeholder="Type a message...">
+        <button onclick="sendMessage()">Send</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 AyurEase | Your Path to Natural Healing</p>
+    </footer>
+
+    <script>
+        function loadMessages() {
+            let messagesContainer = document.getElementById("messages");
+            messagesContainer.innerHTML = "";
+            let messages = JSON.parse(localStorage.getItem("chatMessages")) || [];
+            messages.forEach(msg => {
+                let messageContainer = document.createElement("p");
+                messageContainer.textContent = msg;
+                messagesContainer.appendChild(messageContainer);
+            });
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function sendMessage() {
+            let input = document.getElementById("messageInput");
+            let message = input.value.trim();
+            if (message !== "") {
+                let messages = JSON.parse(localStorage.getItem("chatMessages")) || [];
+                messages.push(message);
+                localStorage.setItem("chatMessages", JSON.stringify(messages));
+                input.value = "";
+                loadMessages();
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", loadMessages);
+    </script>
+</body>
+</html>
