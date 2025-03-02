@@ -3,33 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AyurEase - Login</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>AyurEase</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let loggedInUser = localStorage.getItem("loggedInUser");
+
+            if (!loggedInUser) {
+                window.location.href = "login.html";
+            }
+        });
+    </script>
 </head>
 <body>
-    <header>
-        <h1>Welcome to AyurEase</h1>
-    </header>
-
-    <section class="main-content">
-        <h2>Login or Sign Up</h2>
-        <form id="login-form">
-            <input type="text" id="username" placeholder="Enter your name" required>
-            <button type="submit">Login</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 AyurEase | Your Path to Natural Healing</p>
-    </footer>
+    <h1>Welcome to AyurEase</h1>
+    <p>You are now logged in.</p>
+    <button onclick="logout()">Logout</button>
 
     <script>
-        document.getElementById("login-form").addEventListener("submit", function (event) {
-            event.preventDefault();
-            let username = document.getElementById("username").value;
-            localStorage.setItem("loggedInUser", username);
-            window.location.href = "category.html"; // Redirect to category page after login
-        });
+        function logout() {
+            localStorage.removeItem("loggedInUser");
+            window.location.href = "login.html";
+        }
     </script>
 </body>
 </html>
