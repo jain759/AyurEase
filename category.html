@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AyurEase - Categories</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { display: none; } /* Hide content until login check */
+    </style>
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let loggedInUser = localStorage.getItem("loggedInUser");
+            if (!loggedInUser || loggedInUser === "null") {
+                window.location.href = "index.html"; // Redirect if not logged in
+            } else {
+                document.body.style.display = "block"; // Show page if logged in
+                document.getElementById("welcome-message").innerText = "Welcome, " + loggedInUser + "!";
+            }
+        });
+    </script>
+
+    <header>
+        <h1>AyurEase - Ayurvedic Remedies</h1>
+        <nav>
+            <a href="category.html" class="button home">&#8962; Home</a>
+            <a href="#" class="button logout" id="logout-link">Logout</a>
+        </nav>
+    </header>
+
+    <section class="main-content">
+        <h2 id="welcome-message"></h2>
+        <section class="categories">
+            <h2>Categories</h2>
+            <div class="category-list">
+                <a href="remedy_digestion.html" class="button digestion">Digestion Remedies</a>
+                <a href="remedy_skin.html" class="button skin">Skin Care Remedies</a>
+                <a href="remedy_hair.html" class="button hair">Hair Care Remedies</a>
+                <a href="remedy_mental.html" class="button mental">Mental Health Remedies</a>
+                <a href="remedy_sleep.html" class="button sleep">Sleep Remedies</a>
+                <a href="remedy_bone.html" class="button bone">Bone Health Remedies</a>
+                <a href="remedy_respiratory.html" class="button respiratory">Respiratory Remedies</a>
+                <a href="remedy_immunity.html" class="button immunity">Immunity Boosting Remedies</a>
+            </div>
+        </section>
+
+        <!-- Live Chat Button -->
+        <button id="open-chat" class="chat-button">💬 Live Chat</button>
+
+        <!-- Hidden Chat Box -->
+        <section id="chat-box" class="hidden">
+            <nav>
+                <button id="close-chat" class="button home">⬅ Home</button>
+            </nav>
+            <h2>💬 Live Chat</h2>
+            <div id="messages"></div>
+            <input type="text" id="messageInput" placeholder="Type a message...">
+            <button id="sendBtn">Send</button>
+        </section>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 AyurEase | Your Path to Natural Healing</p>
+    </footer>
+
+    <script>
+        document.getElementById("logout-link").addEventListener("click", function () {
+            localStorage.removeItem("loggedInUser");
+            window.location.href = "index.html";
+        });
+
+        // Chat System
+        document.getElementById("open-chat").addEventListener("click", function () {
+            document.getElementById("chat-box").classList.remove("hidden");
+        });
+
+        document.getElementById("close-chat").addEventListener("click", function () {
+            document.getElementById("chat-box").classList.add("hidden");
+        });
+    </script>
+
+    <script type="module" src="chat.js"></script> <!-- Separate Firebase Chat Logic -->
+</body>
+</html>
