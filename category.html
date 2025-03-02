@@ -3,35 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AyurEase - Categories</title>
+    <title>AyurEase - Remedies</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body { display: none; } /* Hide content until login check */
-    </style>
-</head>
-<body>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             let loggedInUser = localStorage.getItem("loggedInUser");
             if (!loggedInUser || loggedInUser === "null") {
-                window.location.href = "index.html"; // Redirect if not logged in
-            } else {
-                document.body.style.display = "block"; // Show page if logged in
-                document.getElementById("welcome-message").innerText = "Welcome, " + loggedInUser + "!";
+                window.location.href = "login.html"; // Redirect if not logged in
             }
         });
-    </script>
 
+        function logout() {
+            localStorage.removeItem("loggedInUser");
+            window.location.href = "login.html"; // Redirect to login page
+        }
+    </script>
+</head>
+<body>
     <header>
-        <h1>AyurEase - Ayurvedic Remedies</h1>
+        <h1>AyurEase - Remedies</h1>
         <nav>
-            <a href="category.html" class="button home">&#8962; Home</a>
-            <a href="#" class="button logout" id="logout-link">Logout</a>
+            <a href="#" class="button logout" onclick="logout()">Logout</a>
         </nav>
     </header>
 
     <section class="main-content">
-        <h2 id="welcome-message"></h2>
+        <h2>Welcome to AyurEase Remedies</h2>
         <section class="categories">
             <h2>Categories</h2>
             <div class="category-list">
@@ -57,30 +54,12 @@
             <h2>💬 Live Chat</h2>
             <div id="messages"></div>
             <input type="text" id="messageInput" placeholder="Type a message...">
-            <button id="sendBtn">Send</button>
+            <button onclick="sendMessage()">Send</button>
         </section>
     </section>
 
     <footer>
         <p>&copy; 2025 AyurEase | Your Path to Natural Healing</p>
     </footer>
-
-    <script>
-        document.getElementById("logout-link").addEventListener("click", function () {
-            localStorage.removeItem("loggedInUser");
-            window.location.href = "index.html";
-        });
-
-        // Chat System
-        document.getElementById("open-chat").addEventListener("click", function () {
-            document.getElementById("chat-box").classList.remove("hidden");
-        });
-
-        document.getElementById("close-chat").addEventListener("click", function () {
-            document.getElementById("chat-box").classList.add("hidden");
-        });
-    </script>
-
-    <script type="module" src="chat.js"></script> <!-- Separate Firebase Chat Logic -->
 </body>
 </html>
