@@ -8,14 +8,15 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             let loggedInUser = localStorage.getItem("loggedInUser");
-            if (!loggedInUser || loggedInUser === "null") {
-                window.location.href = "login.html"; // Redirect if not logged in
+
+            if (!loggedInUser) {
+                window.location.href = "login.html"; // Redirect to login if not logged in
             }
         });
 
         function logout() {
             localStorage.removeItem("loggedInUser");
-            window.location.href = "login.html"; // Redirect to login page
+            window.location.href = "login.html"; // Redirect back to login
         }
     </script>
 </head>
@@ -28,7 +29,7 @@
     </header>
 
     <section class="main-content">
-        <h2>Welcome to AyurEase Remedies</h2>
+        <h2>Welcome to Ayurvedic Remedies</h2>
         <section class="categories">
             <h2>Categories</h2>
             <div class="category-list">
@@ -61,5 +62,16 @@
     <footer>
         <p>&copy; 2025 AyurEase | Your Path to Natural Healing</p>
     </footer>
+
+    <script>
+        // Chat Toggle
+        document.getElementById("open-chat").addEventListener("click", function () {
+            document.getElementById("chat-box").classList.remove("hidden");
+        });
+
+        document.getElementById("close-chat").addEventListener("click", function () {
+            document.getElementById("chat-box").classList.add("hidden");
+        });
+    </script>
 </body>
 </html>
