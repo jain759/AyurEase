@@ -3,35 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up - AyurEase</title>
+    <title>AyurEase - Sign Up</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        function signUp(event) {
-            event.preventDefault(); // Prevent form submission
-            
-            // Get user input
-            let username = document.getElementById("signup-username").value;
-            let email = document.getElementById("signup-email").value;
-            let password = document.getElementById("signup-password").value;
-
-            // Store user details in local storage (for demo purposes)
-            localStorage.setItem("username", username);
-            localStorage.setItem("email", email);
-            localStorage.setItem("password", password);
-
-            alert("Sign-up successful! Redirecting to login page...");
-            window.location.href = "login.html"; // Redirect to login page
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: white;
+            text-align: center;
+            padding: 50px;
         }
-    </script>
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            margin: auto;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background: #00e6e6;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #00cccc;
+        }
+    </style>
 </head>
 <body>
-    <h2>Sign Up</h2>
-    <form onsubmit="signUp(event)">
-        <input type="text" id="signup-username" placeholder="Username" required>
-        <input type="email" id="signup-email" placeholder="Email" required>
-        <input type="password" id="signup-password" placeholder="Password" required>
-        <button type="submit">Sign Up</button>
-    </form>
+    <h1>Welcome to AyurEase</h1>
+    <p>Be better, starting today! Sign up to continue.</p>
+    
+    <div class="container">
+        <h2>Sign Up</h2>
+        <input type="text" id="newUsername" placeholder="Choose a username">
+        <button onclick="signup()">Sign Up</button>
+        <p>Already have an account? <a href="login.html" style="color: #aaffff;">Login</a></p>
+    </div>
+
+    <script>
+        function signup() {
+            let newUsername = document.getElementById("newUsername").value;
+            if (newUsername.trim() !== "") {
+                localStorage.setItem("loggedInUser", newUsername);
+                window.location.href = "category.html";
+            } else {
+                alert("Please enter a username.");
+            }
+        }
+    </script>
 </body>
 </html>
-
