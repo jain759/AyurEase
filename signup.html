@@ -3,74 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup - AyurEase</title>
+    <title>Sign Up - AyurEase</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            font-family: Arial, sans-serif;
             text-align: center;
+            background: linear-gradient(to right, #36d1dc, #5b86e5);
             color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
-
         .container {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(0, 0, 0, 0.8);
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
             width: 300px;
         }
-
-        h1 {
-            font-size: 24px;
+        h2 {
             margin-bottom: 20px;
         }
-
         input {
-            width: 90%;
+            width: 100%;
             padding: 10px;
             margin: 10px 0;
             border: none;
             border-radius: 5px;
             font-size: 16px;
         }
-
         button {
-            background: #333;
-            color: white;
+            width: 100%;
             padding: 10px;
+            background: #ff4500;
+            color: white;
             border: none;
-            border-radius: 5px;
-            font-size: 16px;
             cursor: pointer;
-            transition: 0.3s;
+            border-radius: 5px;
+            font-size: 18px;
         }
-
         button:hover {
-            background: #555;
+            background: #ff6347;
         }
-
+        p {
+            margin-top: 10px;
+        }
         a {
-            color: yellow;
+            color: #ffcc00;
             text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to AyurEase - Be better starting today!<br>Sign up to continue</h1>
     <div class="container">
-        <h2>Sign Up</h2>
-        <input type="text" id="newUsername" placeholder="Choose a username">
+        <h2>Welcome to AyurEase</h2>
+        <p>Be better, starting today! Sign up to continue.</p>
+        <input type="text" id="newUsername" placeholder="Enter Username">
+        <input type="password" id="newPassword" placeholder="Enter Password">
         <button onclick="signup()">Sign Up</button>
         <p>Already have an account? <a href="login.html">Login</a></p>
     </div>
@@ -78,11 +71,15 @@
     <script>
         function signup() {
             let newUsername = document.getElementById("newUsername").value;
-            if (newUsername.trim() !== "") {
-                localStorage.setItem("loggedInUser", newUsername);
-                window.location.href = "index.html";
+            let newPassword = document.getElementById("newPassword").value;
+
+            if (newUsername && newPassword) {
+                localStorage.setItem("username", newUsername);
+                localStorage.setItem("password", newPassword);
+                alert("Signup successful! Redirecting to login.");
+                window.location.href = "login.html";
             } else {
-                alert("Please enter a valid username.");
+                alert("Please enter a valid username and password.");
             }
         }
     </script>
