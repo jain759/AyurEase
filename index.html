@@ -17,9 +17,8 @@
         </nav>
     </header>
 
-    <section class="main-content">
+    <section class="main-content" id="main-content" style="display: none;">
         <h2 id="welcome-message"></h2>
-
         <section class="categories">
             <h2>Categories</h2>
             <div class="category-list">
@@ -33,20 +32,20 @@
                 <a href="remedy_immunity.html" class="button immunity">Immunity Boosting Remedies</a>
             </div>
         </section>
-    </section>
 
-    <!-- Live Chat Button -->
-    <button id="open-chat" class="chat-button">💬 Live Chat</button>
+        <!-- Live Chat Button -->
+        <button id="open-chat" class="chat-button">💬 Live Chat</button>
 
-    <!-- Hidden Chat Box -->
-    <section id="chat-box" class="hidden">
-        <nav>
-            <button id="close-chat" class="button home">⬅ Home</button>
-        </nav>
-        <h2>💬 Live Chat</h2>
-        <div id="messages"></div>
-        <input type="text" id="messageInput" placeholder="Type a message...">
-        <button onclick="sendMessage()">Send</button>
+        <!-- Hidden Chat Box -->
+        <section id="chat-box" class="hidden">
+            <nav>
+                <button id="close-chat" class="button home">⬅ Home</button>
+            </nav>
+            <h2>💬 Live Chat</h2>
+            <div id="messages"></div>
+            <input type="text" id="messageInput" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </section>
     </section>
 
     <footer>
@@ -60,56 +59,28 @@
             let loginLink = document.getElementById("login-link");
             let signupLink = document.getElementById("signup-link");
             let logoutLink = document.getElementById("logout-link");
+            let mainContent = document.getElementById("main-content");
 
             if (loggedInUser && loggedInUser !== "null") {
                 welcomeMessage.innerHTML = "Welcome, " + loggedInUser + "!";
                 loginLink.style.display = "none";
                 signupLink.style.display = "none";
                 logoutLink.style.display = "inline-block";
+                mainContent.style.display = "block";
+            } else {
+                window.location.href = "login.html";
             }
 
             logoutLink.addEventListener("click", function () {
                 localStorage.removeItem("loggedInUser");
                 window.location.href = "index.html";
             });
-
-            // Chat Box Toggle
-            document.getElementById("open-chat").addEventListener("click", function () {
-                document.getElementById("chat-box").classList.remove("hidden");
-                document.getElementById("open-chat").style.display = "none";
-            });
-
-            document.getElementById("close-chat").addEventListener("click", function () {
-                document.getElementById("chat-box").classList.add("hidden");
-                document.getElementById("open-chat").style.display = "block";
-            });
         });
-
-        function loadMessages() {
-            let messagesContainer = document.getElementById("messages");
-            messagesContainer.innerHTML = "";
-            let messages = JSON.parse(localStorage.getItem("chatMessages")) || [];
-            messages.forEach(msg => {
-                let messageContainer = document.createElement("p");
-                messageContainer.textContent = msg;
-                messagesContainer.appendChild(messageContainer);
-            });
-            messagesContainer.scrollTop = messagesContainer.scrollHeight;
-        }
-
-        function sendMessage() {
-            let input = document.getElementById("messageInput");
-            let message = input.value.trim();
-            if (message !== "") {
-                let messages = JSON.parse(localStorage.getItem("chatMessages")) || [];
-                messages.push(message);
-                localStorage.setItem("chatMessages", JSON.stringify(messages));
-                input.value = "";
-                loadMessages();
-            }
-        }
-
-        document.addEventListener("DOMContentLoaded", loadMessages);
     </script>
 </body>
 </html>
+
+
+       
+        
+          
