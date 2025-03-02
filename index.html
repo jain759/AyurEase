@@ -7,17 +7,23 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let loggedInUser = localStorage.getItem("loggedInUser");
+            if (!loggedInUser || loggedInUser === "null") {
+                window.location.href = "login.html";
+            }
+        });
+    </script>
     <header>
         <h1>AyurEase - Ayurvedic Remedies</h1>
         <nav>
             <a href="index.html" class="button home">&#8962; Home</a>
-            <a href="login.html" class="button" id="login-link">Login</a>
-            <a href="signup.html" class="button" id="signup-link">Sign Up</a>
-            <a href="#" class="button logout" id="logout-link" style="display: none;">Logout</a>
+            <a href="#" class="button logout" id="logout-link">Logout</a>
         </nav>
     </header>
 
-    <section class="main-content" id="main-content" style="display: none;">
+    <section class="main-content">
         <h2 id="welcome-message"></h2>
         <section class="categories">
             <h2>Categories</h2>
@@ -56,31 +62,17 @@
         document.addEventListener("DOMContentLoaded", function () {
             let loggedInUser = localStorage.getItem("loggedInUser");
             let welcomeMessage = document.getElementById("welcome-message");
-            let loginLink = document.getElementById("login-link");
-            let signupLink = document.getElementById("signup-link");
             let logoutLink = document.getElementById("logout-link");
-            let mainContent = document.getElementById("main-content");
 
             if (loggedInUser && loggedInUser !== "null") {
                 welcomeMessage.innerHTML = "Welcome, " + loggedInUser + "!";
-                loginLink.style.display = "none";
-                signupLink.style.display = "none";
-                logoutLink.style.display = "inline-block";
-                mainContent.style.display = "block";
-            } else {
-                window.location.href = "login.html";
             }
 
             logoutLink.addEventListener("click", function () {
                 localStorage.removeItem("loggedInUser");
-                window.location.href = "index.html";
+                window.location.href = "login.html";
             });
         });
     </script>
 </body>
 </html>
-
-
-       
-        
-          
