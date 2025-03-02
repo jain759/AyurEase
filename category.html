@@ -8,55 +8,34 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             let loggedInUser = localStorage.getItem("loggedInUser");
-
-            if (!loggedInUser) {
+            if (!loggedInUser || loggedInUser === "null") {
                 window.location.href = "login.html"; // Redirect to login if not logged in
             }
         });
-
-        function logout() {
-            localStorage.removeItem("loggedInUser");
-            window.location.href = "login.html"; // Redirect back to login
-        }
     </script>
 </head>
 <body>
+
     <header>
-        <h1>AyurEase - Remedies</h1>
+        <h1>AyurEase - Ayurvedic Remedies</h1>
         <nav>
-            <a href="#" class="button logout" onclick="logout()">Logout</a>
+            <a href="category.html" class="button home">🏠 Home</a>
+            <a href="#" class="button logout" id="logout-link">Logout</a>
         </nav>
     </header>
 
     <section class="main-content">
-        <h2>Welcome to Ayurvedic Remedies</h2>
-        <section class="categories">
-            <h2>Categories</h2>
-            <div class="category-list">
-                <a href="remedy_digestion.html" class="button digestion">Digestion Remedies</a>
-                <a href="remedy_skin.html" class="button skin">Skin Care Remedies</a>
-                <a href="remedy_hair.html" class="button hair">Hair Care Remedies</a>
-                <a href="remedy_mental.html" class="button mental">Mental Health Remedies</a>
-                <a href="remedy_sleep.html" class="button sleep">Sleep Remedies</a>
-                <a href="remedy_bone.html" class="button bone">Bone Health Remedies</a>
-                <a href="remedy_respiratory.html" class="button respiratory">Respiratory Remedies</a>
-                <a href="remedy_immunity.html" class="button immunity">Immunity Boosting Remedies</a>
-            </div>
-        </section>
-
-        <!-- Live Chat Button -->
-        <button id="open-chat" class="chat-button">💬 Live Chat</button>
-
-        <!-- Hidden Chat Box -->
-        <section id="chat-box" class="hidden">
-            <nav>
-                <button id="close-chat" class="button home">⬅ Home</button>
-            </nav>
-            <h2>💬 Live Chat</h2>
-            <div id="messages"></div>
-            <input type="text" id="messageInput" placeholder="Type a message...">
-            <button onclick="sendMessage()">Send</button>
-        </section>
+        <h2>Explore Remedies</h2>
+        <div class="category-list">
+            <a href="remedy_digestion.html" class="button digestion">Digestion Remedies</a>
+            <a href="remedy_skin.html" class="button skin">Skin Care Remedies</a>
+            <a href="remedy_hair.html" class="button hair">Hair Care Remedies</a>
+            <a href="remedy_mental.html" class="button mental">Mental Health Remedies</a>
+            <a href="remedy_sleep.html" class="button sleep">Sleep Remedies</a>
+            <a href="remedy_bone.html" class="button bone">Bone Health Remedies</a>
+            <a href="remedy_respiratory.html" class="button respiratory">Respiratory Remedies</a>
+            <a href="remedy_immunity.html" class="button immunity">Immunity Boosting Remedies</a>
+        </div>
     </section>
 
     <footer>
@@ -64,14 +43,14 @@
     </footer>
 
     <script>
-        // Chat Toggle
-        document.getElementById("open-chat").addEventListener("click", function () {
-            document.getElementById("chat-box").classList.remove("hidden");
-        });
-
-        document.getElementById("close-chat").addEventListener("click", function () {
-            document.getElementById("chat-box").classList.add("hidden");
+        document.addEventListener("DOMContentLoaded", function () {
+            let logoutLink = document.getElementById("logout-link");
+            logoutLink.addEventListener("click", function () {
+                localStorage.removeItem("loggedInUser");
+                window.location.href = "login.html"; // Redirect to login after logout
+            });
         });
     </script>
+
 </body>
 </html>
