@@ -4,60 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - AyurEase</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background: linear-gradient(to right, #36d1dc, #5b86e5);
-            color: white;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-        .container {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 30px;
-            border-radius: 10px;
-            width: 300px;
-        }
-        input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            background: #ff4500;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        button:hover {
-            background: #ff6347;
-        }
-        a {
-            color: #ffcc00;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <div class="container">
         <h2>Welcome to AyurEase</h2>
         <p>Be better, starting today! Sign up to continue.</p>
-        <input type="text" id="newUsername" placeholder="Enter Username">
-        <input type="password" id="newPassword" placeholder="Enter Password">
-        <button onclick="signup()">Sign Up</button>
+
+        <form id="signup-form">
+            <input type="text" id="newUsername" placeholder="Enter Username" required>
+            <input type="password" id="newPassword" placeholder="Enter Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+
         <p>Already have an account? <a href="login.html">Login</a></p>
     </div>
 
     <script>
-        function signup() {
+        document.getElementById("signup-form").addEventListener("submit", function(event) {
+            event.preventDefault();
             let newUsername = document.getElementById("newUsername").value;
             let newPassword = document.getElementById("newPassword").value;
 
@@ -69,9 +35,8 @@
             } else {
                 alert("Please enter a valid username and password.");
             }
-        }
+        });
     </script>
-    <script src="signup.js"></script>
 
 </body>
 </html>
