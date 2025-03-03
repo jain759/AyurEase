@@ -2,79 +2,103 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background: #f7f5f2;
+    background: #f4f4f4;
     color: black;
     margin: 0;
     padding: 0;
 }
 
-/* Container */
 .container {
-    width: 350px;
-    margin: 100px auto;
-    padding: 30px;
+    width: 90%;
+    max-width: 400px;
+    margin: 50px auto;
     background: white;
-    color: black;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Input Fields */
-input {
-    width: 90%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+/* Header */
+header {
+    background: #222;
+    padding: 20px;
+    color: white;
+    font-size: 22px;
+    text-align: center;
 }
 
 /* Buttons */
-.btn {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    background: #ff6f61;
+button, .btn {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 10px;
+    background: #ff7e5f; /* Orange */
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 5px;
     font-size: 16px;
-    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s ease-in-out;
     text-decoration: none;
-    margin: 10px 0;
 }
 
-.btn:hover {
-    background: #e65c50;
+button:hover, .btn:hover {
+    background: #ff5733; /* Darker Orange */
 }
 
-/* Link Styled as Button */
-.btn-link {
-    display: block;
-    background: #48a9a6;
-    color: white;
-    padding: 12px;
+/* Remedy Buttons */
+.remedy-btn {
+    width: 90%;
+    padding: 15px;
+    font-size: 18px;
+    background: #28a745; /* Green */
     border-radius: 5px;
-    text-decoration: none;
-    margin: 10px auto;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 10px 0;
+    transition: background 0.3s ease-in-out;
+}
+
+.remedy-btn:hover {
+    background: #218838;
+}
+
+/* Forms */
+input[type="text"], input[type="password"] {
     width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.btn-link:hover {
-    background: #3d8e8b;
+form {
+    margin-top: 20px;
 }
 
-/* Category Buttons */
-.category-list .btn {
-    width: 80%;
-    margin: 10px auto;
+p {
+    margin-top: 10px;
+    font-size: 14px;
 }
 
-/* Logout Button */
-.logout {
-    background: #f44336;
+p a {
+    color: #ff7e5f;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-.logout:hover {
-    background: #d32f2f;
+p a:hover {
+    color: #ff5733;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    padding: 10px;
+    color: white;
+    margin-top: 20px;
+    text-align: center;
 }
