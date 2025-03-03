@@ -9,36 +9,16 @@
 <body>
 
     <div class="container">
-        <h1>Welcome to AyurEase</h1>
-        <p>Be better starting today. Login or Signup to continue.</p>
-
+        <h2>Login to Your Account</h2>
         <form id="login-form">
-            <h2>Login</h2>
-            <input type="text" id="username" placeholder="Enter Username" required>
-            <input type="password" id="password" placeholder="Enter Password" required>
+            <input type="text" id="login-username" placeholder="Enter Username" required>
+            <input type="password" id="login-password" placeholder="Enter Password" required>
             <button type="submit">Login</button>
         </form>
-
         <p>Don't have an account? <a href="signup.html">Sign up</a></p>
     </div>
 
-    <script>
-        document.getElementById("login-form").addEventListener("submit", function(event) {
-            event.preventDefault();
-            let username = document.getElementById("username").value;
-            let password = document.getElementById("password").value;
-
-            let storedUser = localStorage.getItem("registeredUser");
-            let storedPass = localStorage.getItem("registeredPass");
-
-            if (username === storedUser && password === storedPass) {
-                localStorage.setItem("loggedInUser", username);
-                window.location.href = "category.html"; // Redirect to category page
-            } else {
-                alert("Invalid username or password!");
-            }
-        });
-    </script>
+    <script src="login.js"></script>
 
 </body>
 </html>
