@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             let loggedInUser = localStorage.getItem("loggedInUser");
             if (!loggedInUser) {
-                window.location.href = "index.html"; // Redirect to login if not logged in
+                window.location.href = "login.html"; 
             }
         });
     </script>
@@ -19,7 +20,7 @@
     <header>
         <h1>AyurEase - Ayurvedic Remedies</h1>
         <nav>
-            <a href="categories.html" class="button home">&#8962; Home</a>
+            <a href="index.html" class="button home">&#8962; Home</a>
             <a href="#" class="button logout" id="logout-link">Logout</a>
         </nav>
     </header>
@@ -45,8 +46,9 @@
     <script>
         document.getElementById("logout-link").addEventListener("click", function () {
             localStorage.removeItem("loggedInUser");
-            window.location.href = "index.html"; // Redirect to login page after logout
+            window.location.href = "login.html"; 
         });
     </script>
+
 </body>
 </html>
