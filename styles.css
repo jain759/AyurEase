@@ -54,39 +54,3 @@ a {
 a:hover {
     text-decoration: underline;
 }
-
-/* Header */
-header {
-    background: #222;
-    padding: 20px;
-    color: white;
-    font-size: 22px;
-}
-
-/* Navigation Bar */
-nav {
-    margin-top: 10px;
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 15px;
-    background: #ff7e5f;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    margin: 5px;
-    font-weight: bold;
-}
-
-.button:hover {
-    background: #feb47b;
-}
-
-/* Footer */
-footer {
-    background: #222;
-    padding: 10px;
-    color: white;
-    margin-top: 20px;
-}
