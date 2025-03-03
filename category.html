@@ -12,7 +12,7 @@
         document.addEventListener("DOMContentLoaded", function () {
             let loggedInUser = localStorage.getItem("loggedInUser");
             if (!loggedInUser) {
-                window.location.href = "login.html"; // Redirect to login if not logged in
+                window.location.href = "login.html"; 
             }
         });
     </script>
@@ -28,14 +28,14 @@
     <section class="categories">
         <h2>Categories</h2>
         <div class="category-list">
-            <a href="remedy_digestion.html" class="button digestion">Digestion Remedies</a>
-            <a href="remedy_skin.html" class="button skin">Skin Care Remedies</a>
-            <a href="remedy_hair.html" class="button hair">Hair Care Remedies</a>
-            <a href="remedy_mental.html" class="button mental">Mental Health Remedies</a>
-            <a href="remedy_sleep.html" class="button sleep">Sleep Remedies</a>
-            <a href="remedy_bone.html" class="button bone">Bone Health Remedies</a>
-            <a href="remedy_respiratory.html" class="button respiratory">Respiratory Remedies</a>
-            <a href="remedy_immunity.html" class="button immunity">Immunity Boosting Remedies</a>
+            <a href="remedy_digestion.html" class="button">Digestion Remedies</a>
+            <a href="remedy_skin.html" class="button">Skin Care Remedies</a>
+            <a href="remedy_hair.html" class="button">Hair Care Remedies</a>
+            <a href="remedy_mental.html" class="button">Mental Health Remedies</a>
+            <a href="remedy_sleep.html" class="button">Sleep Remedies</a>
+            <a href="remedy_bone.html" class="button">Bone Health Remedies</a>
+            <a href="remedy_respiratory.html" class="button">Respiratory Remedies</a>
+            <a href="remedy_immunity.html" class="button">Immunity Boosting Remedies</a>
         </div>
     </section>
 
@@ -46,9 +46,10 @@
     <script>
         document.getElementById("logout-link").addEventListener("click", function () {
             localStorage.removeItem("loggedInUser");
-            window.location.href = "login.html"; // Redirect to login on logout
+            window.location.href = "login.html"; 
         });
     </script>
 
 </body>
 </html>
+
