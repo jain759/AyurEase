@@ -28,11 +28,14 @@
             let username = document.getElementById("username").value;
             let password = document.getElementById("password").value;
 
-            if (username && password) {
+            let storedUser = localStorage.getItem("registeredUser");
+            let storedPass = localStorage.getItem("registeredPass");
+
+            if (username === storedUser && password === storedPass) {
                 localStorage.setItem("loggedInUser", username);
-                window.location.href = "categories.html"; 
+                window.location.href = "category.html"; // Redirect to category page
             } else {
-                alert("Please enter a valid username and password!");
+                alert("Invalid username or password!");
             }
         });
     </script>
