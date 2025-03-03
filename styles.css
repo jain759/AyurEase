@@ -2,8 +2,8 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background: linear-gradient(to right, #36d1dc, #5b86e5);
-    color: white;
+    background: #f7f5f2;
+    color: black;
     margin: 0;
     padding: 0;
 }
@@ -13,11 +13,10 @@ body {
     width: 350px;
     margin: 100px auto;
     padding: 30px;
-    background: rgba(255, 255, 255, 0.9);
+    background: white;
     color: black;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 1s;
 }
 
 /* Input Fields */
@@ -30,34 +29,52 @@ input {
 }
 
 /* Buttons */
-button {
+.btn {
+    display: block;
     width: 100%;
     padding: 12px;
-    background: #ff7e5f;
+    background: #ff6f61;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 5px;
     font-size: 16px;
-}
-
-button:hover {
-    background: #feb47b;
-}
-
-/* Links */
-a {
-    color: #ff4500;
-    font-weight: bold;
+    text-align: center;
     text-decoration: none;
+    margin: 10px 0;
 }
 
-a:hover {
-    text-decoration: underline;
+.btn:hover {
+    background: #e65c50;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+/* Link Styled as Button */
+.btn-link {
+    display: block;
+    background: #48a9a6;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 10px auto;
+    width: 100%;
+}
+
+.btn-link:hover {
+    background: #3d8e8b;
+}
+
+/* Category Buttons */
+.category-list .btn {
+    width: 80%;
+    margin: 10px auto;
+}
+
+/* Logout Button */
+.logout {
+    background: #f44336;
+}
+
+.logout:hover {
+    background: #d32f2f;
 }
