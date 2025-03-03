@@ -5,66 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - AyurEase</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background: linear-gradient(to right, #ff7e5f, #feb47b);
-            color: white;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 300px;
-            margin: 100px auto;
-            padding: 20px;
-            background: white;
-            color: black;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        input {
-            width: 90%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .button {
-            width: 100%;
-            padding: 10px;
-            background: #ff7e5f;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .button:hover {
-            background: #feb47b;
-        }
-        .switch {
-            margin-top: 10px;
-            font-size: 0.9em;
-        }
-        .switch a {
-            color: #ff7e5f;
-            font-weight: bold;
-        }
-    </style>
 </head>
 <body>
 
-    <h1>Welcome to AyurEase</h1>
-    <p>Be better starting today. Login/Signup to continue.</p>
-
     <div class="container">
-        <h2>Login</h2>
+        <h1>Welcome to AyurEase</h1>
+        <p>Be better starting today. Login or Signup to continue.</p>
+
         <form id="login-form">
-            <input type="text" id="username" placeholder="Enter username" required>
-            <input type="password" id="password" placeholder="Enter password" required>
-            <button type="submit" class="button">Login</button>
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Enter Username" required>
+            <input type="password" id="password" placeholder="Enter Password" required>
+            <button type="submit">Login</button>
         </form>
-        <p class="switch">Don't have an account? <a href="signup.html">Sign up</a></p>
+
+        <p>Don't have an account? <a href="signup.html">Sign up</a></p>
     </div>
 
     <script>
@@ -75,7 +30,7 @@
 
             if (username && password) {
                 localStorage.setItem("loggedInUser", username);
-                window.location.href = "category.html"; // Redirect to remedies page
+                window.location.href = "categories.html"; 
             } else {
                 alert("Please enter a valid username and password!");
             }
