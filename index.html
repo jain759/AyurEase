@@ -3,53 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AyurEase - Login/Signup</title>
+    <title>AyurEase - Home</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <div class="container">
         <h1>Welcome to AyurEase</h1>
-        <p>Be better starting today! Login or Signup to continue.</p>
-
-        <div class="form-container">
-            <form id="login-form">
-                <h2>Login</h2>
-                <input type="text" id="login-username" placeholder="Enter Username" required>
-                <input type="password" id="login-password" placeholder="Enter Password" required>
-                <button type="submit">Login</button>
-            </form>
-
-            <form id="signup-form">
-                <h2>Signup</h2>
-                <input type="text" id="signup-username" placeholder="Choose Username" required>
-                <input type="password" id="signup-password" placeholder="Choose Password" required>
-                <button type="submit">Signup</button>
-            </form>
-        </div>
+        <p>Your journey to natural healing starts here.</p>
+        <a href="login.html" class="button">Login</a>
+        <a href="signup.html" class="button">Sign Up</a>
     </div>
 
-    <script>
-        document.getElementById("login-form").addEventListener("submit", function(event) {
-            event.preventDefault();
-            let username = document.getElementById("login-username").value;
-            let password = document.getElementById("login-password").value;
-            
-            if (username && password) {
-                localStorage.setItem("loggedInUser", username);
-                window.location.href = "categories.html"; // Redirect to remedies page
-            }
-        });
-
-        document.getElementById("signup-form").addEventListener("submit", function(event) {
-            event.preventDefault();
-            let username = document.getElementById("signup-username").value;
-            let password = document.getElementById("signup-password").value;
-            
-            if (username && password) {
-                localStorage.setItem("loggedInUser", username);
-                alert("Signup successful! Please log in.");
-            }
-        });
-    </script>
 </body>
 </html>
