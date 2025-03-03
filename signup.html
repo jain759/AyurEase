@@ -28,12 +28,12 @@
             let newPassword = document.getElementById("newPassword").value;
 
             if (newUsername && newPassword) {
-                localStorage.setItem("username", newUsername);
-                localStorage.setItem("password", newPassword);
+                localStorage.setItem("registeredUser", newUsername);
+                localStorage.setItem("registeredPass", newPassword);
                 alert("Signup successful! Redirecting to login.");
-                window.location.href = "login.html";
+                window.location.href = "login.html"; // Redirect to login page
             } else {
-                alert("Please enter a valid username and password.");
+                alert("Please fill in all fields.");
             }
         });
     </script>
