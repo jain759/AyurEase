@@ -1,8 +1,8 @@
 document.getElementById("signup-form").addEventListener("submit", function (event) {
     event.preventDefault();
 
-    let newUsername = document.getElementById("signup-username").value;
-    let newPassword = document.getElementById("signup-password").value;
+    let newUsername = document.getElementById("newUsername").value;
+    let newPassword = document.getElementById("newPassword").value;
 
     if (newUsername && newPassword) {
         localStorage.setItem("registeredUser", newUsername);
