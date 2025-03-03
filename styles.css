@@ -17,6 +17,7 @@ body {
     color: black;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s;
 }
 
 /* Input Fields */
@@ -53,4 +54,10 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
