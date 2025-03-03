@@ -5,27 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AyurEase - Remedies</title>
     <link rel="stylesheet" href="styles.css">
+</head>
+<body>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             let loggedInUser = localStorage.getItem("loggedInUser");
-            if (!loggedInUser || loggedInUser === "null") {
-                window.location.href = "login.html"; // Redirect to login if not logged in
+            if (!loggedInUser) {
+                window.location.href = "index.html"; // Redirect to login if not logged in
             }
         });
     </script>
-</head>
-<body>
 
     <header>
         <h1>AyurEase - Ayurvedic Remedies</h1>
         <nav>
-            <a href="index.html" class="button home">🏠 Home</a> <!-- FIXED HOME BUTTON -->
+            <a href="categories.html" class="button home">&#8962; Home</a>
             <a href="#" class="button logout" id="logout-link">Logout</a>
         </nav>
     </header>
 
-    <section class="main-content">
-        <h2>Explore Remedies</h2>
+    <section class="categories">
+        <h2>Categories</h2>
         <div class="category-list">
             <a href="remedy_digestion.html" class="button digestion">Digestion Remedies</a>
             <a href="remedy_skin.html" class="button skin">Skin Care Remedies</a>
@@ -43,14 +43,10 @@
     </footer>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            let logoutLink = document.getElementById("logout-link");
-            logoutLink.addEventListener("click", function () {
-                localStorage.removeItem("loggedInUser");
-                window.location.href = "login.html"; // Redirect to login after logout
-            });
+        document.getElementById("logout-link").addEventListener("click", function () {
+            localStorage.removeItem("loggedInUser");
+            window.location.href = "index.html"; // Redirect to login page after logout
         });
     </script>
-
 </body>
 </html>
