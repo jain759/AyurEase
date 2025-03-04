@@ -2,131 +2,69 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background: white;  /* White background restored */
+    background: white;
     color: black;
     margin: 0;
     padding: 0;
 }
 
-/* Centered Container for Forms */
-.container {
-    width: 90%;
-    max-width: 400px;
-    margin: 50px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
 /* Header */
 header {
     background: #222;
-    padding: 20px;
+    padding: 15px;
     color: white;
     font-size: 22px;
     text-align: center;
 }
 
-/* General Button Styling */
+/* Buttons (Small, Clickable, and Horizontally Aligned) */
 button, .btn {
     display: inline-block;
-    padding: 12px 20px;
-    margin: 10px;
-    background: #ff7e5f; /* Orange for normal buttons */
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
+    padding: 8px 15px;  /* Smaller size */
+    margin: 5px;  /* Less spacing */
+    font-size: 14px;  /* Smaller font */
     font-weight: bold;
-    text-transform: uppercase;
-    transition: background 0.3s ease-in-out;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     text-decoration: none;
-}
-
-button:hover, .btn:hover {
-    background: #ff5733; /* Darker Orange */
-}
-
-/* Remedy Buttons (Green) */
-.remedy-btn {
-    display: inline-block;
-    padding: 12px 18px;
-    margin: 10px;
-    font-size: 16px;
-    background: #28a745; /* Green */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
     transition: background 0.3s ease-in-out;
 }
 
-.remedy-btn:hover {
-    background: #218838; /* Darker Green */
-}
-
-/* Category Buttons (Blue) */
+/* Different colors for buttons */
 .category-btn {
-    display: inline-block;
-    padding: 12px 18px;
-    margin: 10px;
-    font-size: 16px;
-    background: #007bff; /* Blue */
+    background: #4CAF50; /* Green */
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s ease-in-out;
+}
+
+.logout-btn {
+    background: #d9534f; /* Red */
+    color: white;
+}
+
+.remedy-btn {
+    background: #ff9800; /* Orange */
+    color: white;
 }
 
 .category-btn:hover {
-    background: #0056b3; /* Darker Blue */
-}
-
-/* Logout Button (Red) */
-.logout-btn {
-    background: #dc3545; /* Red */
+    background: #388E3C;
 }
 
 .logout-btn:hover {
-    background: #b52a38;
+    background: #c9302c;
 }
 
-/* Remedy & Category Button Layout */
-.remedy-list, .category-list {
+.remedy-btn:hover {
+    background: #f57c00;
+}
+
+/* Centering Button Section */
+.category-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-}
-
-/* Forms */
-input[type="text"], input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Link to switch between Login and Signup */
-p {
-    margin-top: 10px;
-    font-size: 14px;
-}
-
-p a {
-    color: #ff7e5f;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-p a:hover {
-    color: #ff5733;
 }
 
 /* Footer */
