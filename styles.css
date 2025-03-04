@@ -2,8 +2,8 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background: #f4f4f4;
-    color: black;
+    background: #008080; /* Teal Background */
+    color: white;
     margin: 0;
     padding: 0;
 }
@@ -11,12 +11,13 @@ body {
 /* Container */
 .container {
     width: 90%;
-    max-width: 600px;
+    max-width: 400px;
     margin: 50px auto;
     background: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    color: black;
 }
 
 /* Header */
@@ -28,85 +29,42 @@ header {
     text-align: center;
 }
 
-/* Button Styling */
-.button-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    padding: 10px 0;
-}
-
-button, .btn {
-    padding: 8px 12px;
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 8px 12px; /* Smaller Button Size */
     margin: 5px;
-    color: white;
     border: none;
     cursor: pointer;
     border-radius: 5px;
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
-    text-decoration: none;
     transition: background 0.3s ease-in-out;
+    text-decoration: none;
+    color: white;
 }
 
-/* Different Button Colors */
+/* Different Colors for Each Button */
 .btn-red { background: #e74c3c; }   /* Red */
 .btn-blue { background: #3498db; }  /* Blue */
 .btn-green { background: #2ecc71; } /* Green */
-.btn-orange { background: #f39c12; } /* Orange */
+.btn-orange { background: #e67e22; } /* Orange */
 .btn-purple { background: #9b59b6; } /* Purple */
+.btn-yellow { background: #f1c40f; color: black; } /* Yellow */
+.btn-pink { background: #e91e63; }  /* Pink */
+.btn-brown { background: #8d6e63; } /* Brown */
 
-.btn-red:hover { background: #c0392b; }
-.btn-blue:hover { background: #2980b9; }
-.btn-green:hover { background: #27ae60; }
-.btn-orange:hover { background: #e67e22; }
-.btn-purple:hover { background: #8e44ad; }
-
-/* Remedy Buttons */
-.remedy-btn {
-    padding: 10px;
-    font-size: 14px;
-    background: #1abc9c; /* Teal */
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    margin: 5px;
-    transition: background 0.3s ease-in-out;
+.btn:hover {
+    opacity: 0.8;
 }
 
-.remedy-btn:hover {
-    background: #16a085;
-}
-
-/* Forms */
-input[type="text"], input[type="password"] {
-    width: 100%;
-    padding: 8px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form {
-    margin-top: 20px;
-}
-
-p {
-    margin-top: 10px;
-    font-size: 14px;
-}
-
-p a {
-    color: #3498db;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-p a:hover {
-    color: #2980b9;
+/* Category List */
+.category-list {
+    display: flex;
+    justify-content: center;  /* Horizontally Align */
+    flex-wrap: wrap;  /* Wrap if too many buttons */
+    gap: 10px;  /* Space between buttons */
 }
 
 /* Footer */
