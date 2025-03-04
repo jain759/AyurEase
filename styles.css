@@ -2,22 +2,10 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background: #008080; /* Teal Background */
+    background-color: teal;  /* Teal background */
     color: white;
     margin: 0;
     padding: 0;
-}
-
-/* Container */
-.container {
-    width: 90%;
-    max-width: 400px;
-    margin: 50px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    color: black;
 }
 
 /* Header */
@@ -29,42 +17,49 @@ header {
     text-align: center;
 }
 
-/* Buttons */
+/* Category Buttons */
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+/* General button styles */
 .btn {
     display: inline-block;
-    padding: 8px 12px; /* Smaller Button Size */
-    margin: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 14px;
-    font-weight: bold;
     text-transform: uppercase;
     transition: background 0.3s ease-in-out;
     text-decoration: none;
     color: white;
+    margin: 5px;
 }
 
-/* Different Colors for Each Button */
-.btn-red { background: #e74c3c; }   /* Red */
-.btn-blue { background: #3498db; }  /* Blue */
-.btn-green { background: #2ecc71; } /* Green */
-.btn-orange { background: #e67e22; } /* Orange */
-.btn-purple { background: #9b59b6; } /* Purple */
-.btn-yellow { background: #f1c40f; color: black; } /* Yellow */
-.btn-pink { background: #e91e63; }  /* Pink */
-.btn-brown { background: #8d6e63; } /* Brown */
+/* Different button colors */
+.btn-red { background: red; }
+.btn-blue { background: blue; }
+.btn-green { background: green; }
+.btn-orange { background: orange; }
+.btn-purple { background: purple; }
+.btn-yellow { background: yellow; color: black; }
+.btn-pink { background: pink; color: black; }
+.btn-brown { background: brown; }
 
+/* Hover effect */
 .btn:hover {
     opacity: 0.8;
 }
 
-/* Category List */
-.category-list {
-    display: flex;
-    justify-content: center;  /* Horizontally Align */
-    flex-wrap: wrap;  /* Wrap if too many buttons */
-    gap: 10px;  /* Space between buttons */
+/* Logout button */
+.logout {
+    background: #ff4444;
 }
 
 /* Footer */
