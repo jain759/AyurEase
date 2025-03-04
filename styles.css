@@ -28,7 +28,7 @@ header {
     text-align: center;
 }
 
-/* Buttons */
+/* General Button Styling */
 button, .btn {
     display: inline-block;
     padding: 12px 20px;
@@ -68,8 +68,36 @@ button:hover, .btn:hover {
     background: #218838; /* Darker Green */
 }
 
-/* Remedy Button Layout */
-.remedy-list {
+/* Category Buttons (Blue) */
+.category-btn {
+    display: inline-block;
+    padding: 12px 18px;
+    margin: 10px;
+    font-size: 16px;
+    background: #007bff; /* Blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.category-btn:hover {
+    background: #0056b3; /* Darker Blue */
+}
+
+/* Logout Button (Red) */
+.logout-btn {
+    background: #dc3545; /* Red */
+}
+
+.logout-btn:hover {
+    background: #b52a38;
+}
+
+/* Remedy & Category Button Layout */
+.remedy-list, .category-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
