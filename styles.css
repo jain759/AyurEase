@@ -1,129 +1,139 @@
-/* General Styles */
+/* General Body Style */
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    background: orange; /* Orange background */
+    background: white;
     color: black;
     margin: 0;
     padding: 0;
 }
 
-/* Header */
+/* Header Style */
 header {
-    background: #222;
-    padding: 15px;
-    color: white;
-    font-size: 22px;
+    background: orange;
+    padding: 20px;
     text-align: center;
+    color: white;
+    font-size: 24px;
 }
 
-/* Buttons */
-button, .btn {
-    display: inline-block;
-    padding: 10px 20px;
+/* Navigation Buttons */
+nav .btn {
     margin: 10px;
+    padding: 10px 20px;
     font-size: 16px;
-    font-weight: bold;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    text-decoration: none;
-    transition: background 0.3s ease-in-out;
 }
 
-/* Category Buttons */
+/* Category Buttons with Different Colors */
+.category-btn:nth-child(1) { background: #f44336; color: white; }
+.category-btn:nth-child(2) { background: #2196F3; color: white; }
+.category-btn:nth-child(3) { background: #4CAF50; color: white; }
+.category-btn:nth-child(4) { background: #FF9800; color: white; }
+.category-btn:nth-child(5) { background: #9C27B0; color: white; }
+.category-btn:nth-child(6) { background: #3F51B5; color: white; }
+.category-btn:nth-child(7) { background: #009688; color: white; }
+.category-btn:nth-child(8) { background: #E91E63; color: white; }
+
 .category-btn {
-    background: #4CAF50;
-    color: white;
+    padding: 15px 25px;
     font-size: 18px;
-    width: 250px;
-}
-
-.category-btn:hover {
-    background: #388E3C;
-}
-
-/* Logout Button */
-.logout-btn {
-    background: #ff9800;
-    color: white;
-    font-size: 16px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
 }
 
-.logout-btn:hover {
-    background: #f57c00;
-}
-
-/* Live Chat Button */
+/* Chat Floating Button */
 .live-chat-btn {
-    background: #2196F3;
-    color: white;
-    font-size: 18px;
     position: fixed;
     bottom: 20px;
     right: 20px;
+    background: #607D8B;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
 }
 
-.live-chat-btn:hover {
-    background: #1976D2;
-}
-
-/* Chat Box */
+/* Chat Box Styling */
 .chat-box {
     position: fixed;
     bottom: 80px;
     right: 20px;
-    background: white;
+    width: 300px;
+    background: #fff;
     border: 2px solid #ccc;
     border-radius: 10px;
-    width: 300px;
-    padding: 10px;
     display: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 .chat-header {
     display: flex;
     justify-content: space-between;
-}
-
-.chat-header .btn {
-    background: #f44336;
-    color: white;
-}
-
-.chat-header .btn:hover {
-    background: #d32f2f;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .chat-messages {
     height: 200px;
     overflow-y: auto;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 14px;
     background: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
-.send-btn {
+#messageInput {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+
+.send-btn, .close-btn {
     background: #4CAF50;
     color: white;
-    width: 100%;
-    font-size: 16px;
-}
-
-.send-btn:hover {
-    background: #388E3C;
-}
-
-/* Footer */
-footer {
-    background: #222;
     padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Login and Signup Pages */
+.login-box, .signup-box {
+    width: 300px;
+    margin: 50px auto;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.login-box input, .signup-box input {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-box button, .signup-box button {
+    width: 95%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #2196F3;
     color: white;
-    margin-top: 20px;
-    text-align: center;
+    font-size: 16px;
 }
