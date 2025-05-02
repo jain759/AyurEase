@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             let loggedInUser = localStorage.getItem("loggedInUser");
@@ -39,12 +38,24 @@
         </div>
     </section>
 
+    <!-- Live Chat Button -->
+    <button id="chatBtn" class="btn chat-btn">💬 Live Chat</button>
+
+    <footer>
+        <p>&copy; 2025 AyurEase | Your Path to Natural Healing</p>
+    </footer>
+
     <script>
+        // Handle logout
         document.getElementById("logout-link").addEventListener("click", function () {
             localStorage.removeItem("loggedInUser");
             window.location.href = "login.html"; 
         });
-    </script>
 
+        // When the "Live Chat" button is clicked, open chat.html
+        document.getElementById("chatBtn").addEventListener("click", function() {
+            window.location.href = "chat.html"; 
+        });
+    </script>
 </body>
 </html>
