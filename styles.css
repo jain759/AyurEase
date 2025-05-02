@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background: orange; /* Orange background */
+    background: white; /* White background for the main area */
     color: black;
     margin: 0;
     padding: 0;
@@ -10,7 +10,7 @@ body {
 
 /* Header */
 header {
-    background: orange; /* Orange background for header */
+    background: orange; /* Orange background */
     padding: 15px;
     color: white;
     font-size: 22px;
@@ -31,82 +31,16 @@ button, .btn {
     transition: background 0.3s ease-in-out;
 }
 
-/* Category Buttons with Different Colors */
-.category-btn-skin {
-    background: #FF5722; /* Skin Care Remedy Button Color */
+/* Category Buttons */
+.category-btn {
+    background: #4CAF50;
     color: white;
     font-size: 18px;
     width: 250px;
 }
 
-.category-btn-skin:hover {
-    background: #E64A19;
-}
-
-.category-btn-sleep {
-    background: #2196F3; /* Sleep Remedy Button Color */
-    color: white;
-    font-size: 18px;
-    width: 250px;
-}
-
-.category-btn-sleep:hover {
-    background: #1976D2;
-}
-
-.category-btn-digestion {
-    background: #4CAF50; /* Digestion Remedy Button Color */
-    color: white;
-    font-size: 18px;
-    width: 250px;
-}
-
-.category-btn-digestion:hover {
+.category-btn:hover {
     background: #388E3C;
-}
-
-.category-btn-mental_health {
-    background: #FFEB3B; /* Mental Health Remedy Button Color */
-    color: black;
-    font-size: 18px;
-    width: 250px;
-}
-
-.category-btn-mental_health:hover {
-    background: #FBC02D;
-}
-
-.category-btn-bone {
-    background: #9C27B0; /* Bone Remedy Button Color */
-    color: white;
-    font-size: 18px;
-    width: 250px;
-}
-
-.category-btn-bone:hover {
-    background: #8E24AA;
-}
-
-.category-btn-respiratory {
-    background: #00BCD4; /* Respiratory Remedy Button Color */
-    color: white;
-    font-size: 18px;
-    width: 250px;
-}
-
-.category-btn-respiratory:hover {
-    background: #0097A7;
-}
-
-.category-btn-immunity {
-    background: #8BC34A; /* Immunity Remedy Button Color */
-    color: white;
-    font-size: 18px;
-    width: 250px;
-}
-
-.category-btn-immunity:hover {
-    background: #689F38;
 }
 
 /* Logout Button */
@@ -129,7 +63,7 @@ button, .btn {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    padding: 15px;
+    padding: 15px 20px; /* Increase size */
 }
 
 .live-chat-btn:hover {
@@ -188,59 +122,110 @@ button, .btn {
 
 /* Footer */
 footer {
-    background: #222;
+    background: orange;
     padding: 10px;
     color: white;
     margin-top: 20px;
     text-align: center;
 }
 
-/* Category Section */
-.categories {
-    background: white; /* White background for the category section */
-    padding: 20px;
-}
-
-.category-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 /* Login and Signup Page Styles */
-input[type="text"], input[type="password"], input[type="email"] {
-    width: 300px;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.login-container, .signup-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    text-align: center;
 }
 
-button[type="submit"] {
+.input-box {
+    margin-bottom: 15px;
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.submit-btn {
     background: #4CAF50;
     color: white;
-    font-size: 16px;
-    padding: 10px 20px;
+    font-size: 18px;
+    padding: 12px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 100%;
 }
 
-button[type="submit"]:hover {
+.submit-btn:hover {
     background: #388E3C;
 }
 
-.form-container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+a {
+    color: #2196F3;
+    text-decoration: none;
 }
 
-/* Header for Login/Signup */
-h1 {
-    color: orange;
-    font-size: 32px;
+a:hover {
+    text-decoration: underline;
+}
+
+/* Category Page Styles */
+.category-container {
+    margin-top: 20px;
+}
+
+.category-btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.category-btn {
+    background: #FF5722; /* Different color for the buttons */
+    color: white;
+    width: 200px;
+    font-size: 16px;
+    padding: 15px;
+}
+
+.category-btn:hover {
+    background: #E64A19;
+}
+
+/* Header for Category Page */
+header {
+    background: orange;
+    padding: 15px;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+}
+
+/* Page Background and Layout */
+body {
+    background-color: white;
+}
+
+/* Footer */
+footer {
+    background: orange;
+    padding: 10px;
+    color: white;
+    margin-top: 20px;
+    text-align: center;
 }
