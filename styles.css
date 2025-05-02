@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background: white; /* White background for the main area */
+    background: white;
     color: black;
     margin: 0;
     padding: 0;
@@ -10,7 +10,7 @@ body {
 
 /* Header */
 header {
-    background: orange; /* Orange background */
+    background: orange;
     padding: 15px;
     color: white;
     font-size: 22px;
@@ -31,16 +31,38 @@ button, .btn {
     transition: background 0.3s ease-in-out;
 }
 
-/* Category Buttons */
-.category-btn {
+/* Remedy Buttons with Different Colors */
+#digestion {
     background: #4CAF50;
-    color: white;
-    font-size: 18px;
-    width: 250px;
 }
 
-.category-btn:hover {
-    background: #388E3C;
+#skin {
+    background: #2196F3;
+}
+
+#hair {
+    background: #9C27B0;
+}
+
+#mental {
+    background: #FF9800;
+}
+
+#sleep {
+    background: #F44336;
+}
+
+#bone {
+    background: #009688;
+}
+
+#respiratory {
+    background: #3F51B5;
+}
+
+#immunity {
+    background: #FFEB3B;
+    color: black;
 }
 
 /* Logout Button */
@@ -63,7 +85,7 @@ button, .btn {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    padding: 15px 20px; /* Increase size */
+    padding: 15px 20px;
 }
 
 .live-chat-btn:hover {
@@ -130,48 +152,55 @@ footer {
 }
 
 /* Login and Signup Page Styles */
-.login-container, .signup-container {
+.form-container {
     width: 100%;
     max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    background: white;
-    text-align: center;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.input-box {
-    margin-bottom: 15px;
+.form-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-.input-box label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 14px;
-}
-
-.input-box input {
+input[type="text"], input[type="password"] {
     width: 100%;
     padding: 10px;
-    font-size: 16px;
+    margin: 10px 0;
     border-radius: 5px;
     border: 1px solid #ccc;
+    font-size: 16px;
 }
 
-.submit-btn {
-    background: #4CAF50;
-    color: white;
-    font-size: 18px;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #2196F3;
+}
+
+button[type="submit"] {
     width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
 }
 
-.submit-btn:hover {
-    background: #388E3C;
+button[type="submit"]:hover {
+    background-color: #388E3C;
+}
+
+/* Centered form content */
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 a {
@@ -181,51 +210,4 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-
-/* Category Page Styles */
-.category-container {
-    margin-top: 20px;
-}
-
-.category-btn-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-}
-
-.category-btn {
-    background: #FF5722; /* Different color for the buttons */
-    color: white;
-    width: 200px;
-    font-size: 16px;
-    padding: 15px;
-}
-
-.category-btn:hover {
-    background: #E64A19;
-}
-
-/* Header for Category Page */
-header {
-    background: orange;
-    padding: 15px;
-    color: white;
-    font-size: 22px;
-    text-align: center;
-}
-
-/* Page Background and Layout */
-body {
-    background-color: white;
-}
-
-/* Footer */
-footer {
-    background: orange;
-    padding: 10px;
-    color: white;
-    margin-top: 20px;
-    text-align: center;
 }
